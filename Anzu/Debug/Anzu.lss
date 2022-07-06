@@ -1,0 +1,1069 @@
+
+Anzu.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000e  00802800  00000728  000007bc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000728  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000022f  0080280e  0080280e  000007ca  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000007ca  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000007fc  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000158  00000000  00000000  0000083c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00004f03  00000000  00000000  00000994  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00002c2c  00000000  00000000  00005897  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000114d  00000000  00000000  000084c3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000002f8  00000000  00000000  00009610  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000019b4  00000000  00000000  00009908  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000db2  00000000  00000000  0000b2bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000108  00000000  00000000  0000c06e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 57 00 	jmp	0xae	; 0xae <__ctors_end>
+   4:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+   8:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+   c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  10:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  14:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  18:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  1c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  20:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  24:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  28:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  2c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  30:	0c 94 b9 01 	jmp	0x372	; 0x372 <__vector_12>
+  34:	0c 94 76 00 	jmp	0xec	; 0xec <__vector_13>
+  38:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  3c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  40:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  44:	0c 94 9f 02 	jmp	0x53e	; 0x53e <__vector_17>
+  48:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  4c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  50:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  54:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  58:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  5c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  60:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  64:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  68:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  6c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  70:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  74:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  78:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  7c:	0c 94 d9 02 	jmp	0x5b2	; 0x5b2 <__vector_31>
+  80:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  84:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  88:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  8c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  90:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  94:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  98:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  9c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  a0:	89 01       	movw	r16, r18
+  a2:	8f 01       	movw	r16, r30
+  a4:	95 01       	movw	r18, r10
+  a6:	9b 01       	movw	r18, r22
+  a8:	a1 01       	movw	r20, r2
+  aa:	a7 01       	movw	r20, r14
+  ac:	ad 01       	movw	r20, r26
+
+000000ae <__ctors_end>:
+  ae:	11 24       	eor	r1, r1
+  b0:	1f be       	out	0x3f, r1	; 63
+  b2:	cf ef       	ldi	r28, 0xFF	; 255
+  b4:	cd bf       	out	0x3d, r28	; 61
+  b6:	df e3       	ldi	r29, 0x3F	; 63
+  b8:	de bf       	out	0x3e, r29	; 62
+
+000000ba <__do_copy_data>:
+  ba:	18 e2       	ldi	r17, 0x28	; 40
+  bc:	a0 e0       	ldi	r26, 0x00	; 0
+  be:	b8 e2       	ldi	r27, 0x28	; 40
+  c0:	e8 e2       	ldi	r30, 0x28	; 40
+  c2:	f7 e0       	ldi	r31, 0x07	; 7
+  c4:	02 c0       	rjmp	.+4      	; 0xca <__do_copy_data+0x10>
+  c6:	05 90       	lpm	r0, Z+
+  c8:	0d 92       	st	X+, r0
+  ca:	ae 30       	cpi	r26, 0x0E	; 14
+  cc:	b1 07       	cpc	r27, r17
+  ce:	d9 f7       	brne	.-10     	; 0xc6 <__do_copy_data+0xc>
+
+000000d0 <__do_clear_bss>:
+  d0:	2a e2       	ldi	r18, 0x2A	; 42
+  d2:	ae e0       	ldi	r26, 0x0E	; 14
+  d4:	b8 e2       	ldi	r27, 0x28	; 40
+  d6:	01 c0       	rjmp	.+2      	; 0xda <.do_clear_bss_start>
+
+000000d8 <.do_clear_bss_loop>:
+  d8:	1d 92       	st	X+, r1
+
+000000da <.do_clear_bss_start>:
+  da:	ad 33       	cpi	r26, 0x3D	; 61
+  dc:	b2 07       	cpc	r27, r18
+  de:	e1 f7       	brne	.-8      	; 0xd8 <.do_clear_bss_loop>
+  e0:	0e 94 5e 02 	call	0x4bc	; 0x4bc <main>
+  e4:	0c 94 92 03 	jmp	0x724	; 0x724 <_exit>
+
+000000e8 <__bad_interrupt>:
+  e8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000ec <__vector_13>:
+#include "IR_Sensor_Driver.h"
+
+static uint8_t sens[8];
+
+/*センサー駆動用割り込み*/
+ISR(TCB1_INT_vect){
+  ec:	1f 92       	push	r1
+  ee:	0f 92       	push	r0
+  f0:	0f b6       	in	r0, 0x3f	; 63
+  f2:	0f 92       	push	r0
+  f4:	11 24       	eor	r1, r1
+  f6:	2f 93       	push	r18
+  f8:	3f 93       	push	r19
+  fa:	4f 93       	push	r20
+  fc:	5f 93       	push	r21
+  fe:	6f 93       	push	r22
+ 100:	7f 93       	push	r23
+ 102:	8f 93       	push	r24
+ 104:	9f 93       	push	r25
+ 106:	ef 93       	push	r30
+ 108:	ff 93       	push	r31
+	for(uint8_t i = 0;i < 64;i++){
+ 10a:	90 e0       	ldi	r25, 0x00	; 0
+ 10c:	40 c0       	rjmp	.+128    	; 0x18e <__EEPROM_REGION_LENGTH__+0x8e>
+		PORTC.OUTCLR = 0x3F;
+ 10e:	e0 e4       	ldi	r30, 0x40	; 64
+ 110:	f4 e0       	ldi	r31, 0x04	; 4
+ 112:	8f e3       	ldi	r24, 0x3F	; 63
+ 114:	86 83       	std	Z+6, r24	; 0x06
+		PORTC.OUTSET = i;
+ 116:	95 83       	std	Z+5, r25	; 0x05
+		
+		PORTE.OUTSET = 0x08;
+ 118:	88 e0       	ldi	r24, 0x08	; 8
+ 11a:	80 93 85 04 	sts	0x0485, r24	; 0x800485 <__TEXT_REGION_LENGTH__+0x7f4485>
+		uint8_t arrPos = (i >> 3); /*アクセス先の配列の添え字*/
+ 11e:	e9 2f       	mov	r30, r25
+ 120:	e6 95       	lsr	r30
+ 122:	e6 95       	lsr	r30
+ 124:	e6 95       	lsr	r30
+		uint8_t bitPos = 7 - (i - (arrPos << 3)); /*アクセス先のビット位置*/
+ 126:	2e 2f       	mov	r18, r30
+ 128:	22 0f       	add	r18, r18
+ 12a:	22 0f       	add	r18, r18
+ 12c:	22 0f       	add	r18, r18
+ 12e:	29 1b       	sub	r18, r25
+ 130:	29 5f       	subi	r18, 0xF9	; 249
+		
+		for(uint8_t i = 0;i < 4;i++)asm("nop");
+ 132:	80 e0       	ldi	r24, 0x00	; 0
+ 134:	02 c0       	rjmp	.+4      	; 0x13a <__EEPROM_REGION_LENGTH__+0x3a>
+ 136:	00 00       	nop
+ 138:	8f 5f       	subi	r24, 0xFF	; 255
+ 13a:	84 30       	cpi	r24, 0x04	; 4
+ 13c:	e0 f3       	brcs	.-8      	; 0x136 <__EEPROM_REGION_LENGTH__+0x36>
+		
+		if(AC0.STATUS & AC_STATE_bm){
+ 13e:	80 91 87 06 	lds	r24, 0x0687	; 0x800687 <__TEXT_REGION_LENGTH__+0x7f4687>
+ 142:	84 ff       	sbrs	r24, 4
+ 144:	10 c0       	rjmp	.+32     	; 0x166 <__EEPROM_REGION_LENGTH__+0x66>
+			/*入力あり*/
+			sens[arrPos] |= (1 << bitPos);
+ 146:	f0 e0       	ldi	r31, 0x00	; 0
+ 148:	41 e0       	ldi	r20, 0x01	; 1
+ 14a:	50 e0       	ldi	r21, 0x00	; 0
+ 14c:	ba 01       	movw	r22, r20
+ 14e:	02 c0       	rjmp	.+4      	; 0x154 <__EEPROM_REGION_LENGTH__+0x54>
+ 150:	66 0f       	add	r22, r22
+ 152:	77 1f       	adc	r23, r23
+ 154:	2a 95       	dec	r18
+ 156:	e2 f7       	brpl	.-8      	; 0x150 <__EEPROM_REGION_LENGTH__+0x50>
+ 158:	9b 01       	movw	r18, r22
+ 15a:	e2 5f       	subi	r30, 0xF2	; 242
+ 15c:	f7 4d       	sbci	r31, 0xD7	; 215
+ 15e:	80 81       	ld	r24, Z
+ 160:	28 2b       	or	r18, r24
+ 162:	20 83       	st	Z, r18
+ 164:	10 c0       	rjmp	.+32     	; 0x186 <__EEPROM_REGION_LENGTH__+0x86>
+		} else {
+			/*入力なし*/
+			sens[arrPos] &= ~(1 << bitPos);
+ 166:	f0 e0       	ldi	r31, 0x00	; 0
+ 168:	41 e0       	ldi	r20, 0x01	; 1
+ 16a:	50 e0       	ldi	r21, 0x00	; 0
+ 16c:	ba 01       	movw	r22, r20
+ 16e:	02 c0       	rjmp	.+4      	; 0x174 <__EEPROM_REGION_LENGTH__+0x74>
+ 170:	66 0f       	add	r22, r22
+ 172:	77 1f       	adc	r23, r23
+ 174:	2a 95       	dec	r18
+ 176:	e2 f7       	brpl	.-8      	; 0x170 <__EEPROM_REGION_LENGTH__+0x70>
+ 178:	9b 01       	movw	r18, r22
+ 17a:	e2 5f       	subi	r30, 0xF2	; 242
+ 17c:	f7 4d       	sbci	r31, 0xD7	; 215
+ 17e:	20 95       	com	r18
+ 180:	80 81       	ld	r24, Z
+ 182:	28 23       	and	r18, r24
+ 184:	20 83       	st	Z, r18
+		}
+		
+		PORTE.OUTCLR = 0x08;
+ 186:	88 e0       	ldi	r24, 0x08	; 8
+ 188:	80 93 86 04 	sts	0x0486, r24	; 0x800486 <__TEXT_REGION_LENGTH__+0x7f4486>
+
+static uint8_t sens[8];
+
+/*センサー駆動用割り込み*/
+ISR(TCB1_INT_vect){
+	for(uint8_t i = 0;i < 64;i++){
+ 18c:	9f 5f       	subi	r25, 0xFF	; 255
+ 18e:	90 34       	cpi	r25, 0x40	; 64
+ 190:	08 f4       	brcc	.+2      	; 0x194 <__EEPROM_REGION_LENGTH__+0x94>
+ 192:	bd cf       	rjmp	.-134    	; 0x10e <__EEPROM_REGION_LENGTH__+0xe>
+			sens[arrPos] &= ~(1 << bitPos);
+		}
+		
+		PORTE.OUTCLR = 0x08;
+	}
+	TCB1.INTFLAGS |= TCB_CAPT_bm;	/*割り込みクリア*/
+ 194:	e0 e9       	ldi	r30, 0x90	; 144
+ 196:	fa e0       	ldi	r31, 0x0A	; 10
+ 198:	86 81       	ldd	r24, Z+6	; 0x06
+ 19a:	81 60       	ori	r24, 0x01	; 1
+ 19c:	86 83       	std	Z+6, r24	; 0x06
+	return;
+}
+ 19e:	ff 91       	pop	r31
+ 1a0:	ef 91       	pop	r30
+ 1a2:	9f 91       	pop	r25
+ 1a4:	8f 91       	pop	r24
+ 1a6:	7f 91       	pop	r23
+ 1a8:	6f 91       	pop	r22
+ 1aa:	5f 91       	pop	r21
+ 1ac:	4f 91       	pop	r20
+ 1ae:	3f 91       	pop	r19
+ 1b0:	2f 91       	pop	r18
+ 1b2:	0f 90       	pop	r0
+ 1b4:	0f be       	out	0x3f, r0	; 63
+ 1b6:	0f 90       	pop	r0
+ 1b8:	1f 90       	pop	r1
+ 1ba:	18 95       	reti
+
+000001bc <IR_Sensor_Driver_Init>:
+
+/*ドライバの初期化*/
+void IR_Sensor_Driver_Init(void){
+	/*GPIOの初期設定*/
+	PORTC.DIRSET = 0x3F;	/*アドレス線*/
+ 1bc:	e0 e4       	ldi	r30, 0x40	; 64
+ 1be:	f4 e0       	ldi	r31, 0x04	; 4
+ 1c0:	9f e3       	ldi	r25, 0x3F	; 63
+ 1c2:	91 83       	std	Z+1, r25	; 0x01
+	PORTD.DIRCLR = 0x02;	/*AC入力*/
+ 1c4:	82 e0       	ldi	r24, 0x02	; 2
+ 1c6:	80 93 62 04 	sts	0x0462, r24	; 0x800462 <__TEXT_REGION_LENGTH__+0x7f4462>
+	PORTE.DIRSET = 0x08;	/*イネーブル*/
+ 1ca:	a0 e8       	ldi	r26, 0x80	; 128
+ 1cc:	b4 e0       	ldi	r27, 0x04	; 4
+ 1ce:	88 e0       	ldi	r24, 0x08	; 8
+ 1d0:	11 96       	adiw	r26, 0x01	; 1
+ 1d2:	8c 93       	st	X, r24
+ 1d4:	11 97       	sbiw	r26, 0x01	; 1
+	
+	PORTC.OUTCLR = 0x3F;
+ 1d6:	96 83       	std	Z+6, r25	; 0x06
+	PORTC.OUTSET = 0x00;	/*アドレスを0x00に*/
+ 1d8:	15 82       	std	Z+5, r1	; 0x05
+	
+	PORTE.OUTCLR = 0x08;	/*イネーブルをネゲート*/
+ 1da:	16 96       	adiw	r26, 0x06	; 6
+ 1dc:	8c 93       	st	X, r24
+	
+	/*TCB1の初期設定*/
+	TCB1.CCMP = irFreq;			/*割り込み周期設定*/
+ 1de:	e0 e9       	ldi	r30, 0x90	; 144
+ 1e0:	fa e0       	ldi	r31, 0x0A	; 10
+ 1e2:	80 e6       	ldi	r24, 0x60	; 96
+ 1e4:	9a ee       	ldi	r25, 0xEA	; 234
+ 1e6:	84 87       	std	Z+12, r24	; 0x0c
+ 1e8:	95 87       	std	Z+13, r25	; 0x0d
+	TCB1.CTRLA |= TCB_ENABLE_bm;	/*TCB1有効化*/
+ 1ea:	80 81       	ld	r24, Z
+ 1ec:	81 60       	ori	r24, 0x01	; 1
+ 1ee:	80 83       	st	Z, r24
+	
+	/*AC0の初期設定*/
+	AC0.MUXCTRLA |= (0x03 << 3) | (0x03);	/*正入力:AINP3(PD1),負入力:DACREF(内部基準電圧)*/
+ 1f0:	e0 e8       	ldi	r30, 0x80	; 128
+ 1f2:	f6 e0       	ldi	r31, 0x06	; 6
+ 1f4:	82 81       	ldd	r24, Z+2	; 0x02
+ 1f6:	8b 61       	ori	r24, 0x1B	; 27
+ 1f8:	82 83       	std	Z+2, r24	; 0x02
+	AC0.CTRLA |= AC_ENABLE_bm;	/*AC0有効化*/
+ 1fa:	80 81       	ld	r24, Z
+ 1fc:	81 60       	ori	r24, 0x01	; 1
+ 1fe:	80 83       	st	Z, r24
+ 200:	08 95       	ret
+
+00000202 <IR_Sensor_Driver_Begin>:
+	return;
+}
+
+/*動作を開始*/
+void IR_Sensor_Driver_Begin(void){
+	TCB1.INTCTRL |= TCB_CAPT_bm;	/*TCB0割り込み許可*/
+ 202:	e0 e9       	ldi	r30, 0x90	; 144
+ 204:	fa e0       	ldi	r31, 0x0A	; 10
+ 206:	85 81       	ldd	r24, Z+5	; 0x05
+ 208:	81 60       	ori	r24, 0x01	; 1
+ 20a:	85 83       	std	Z+5, r24	; 0x05
+ 20c:	08 95       	ret
+
+0000020e <RGB_LED_Driver_SetColour>:
+}
+
+/*動作を停止*/
+void RGB_LED_Driver_Stop(void){
+	/*TCB0の割り込みを無効化*/
+	TCB0.INTCTRL &= ~(TCB_CAPT_bm);
+ 20e:	98 2f       	mov	r25, r24
+ 210:	96 95       	lsr	r25
+ 212:	96 95       	lsr	r25
+ 214:	96 95       	lsr	r25
+ 216:	39 2f       	mov	r19, r25
+ 218:	33 0f       	add	r19, r19
+ 21a:	33 0f       	add	r19, r19
+ 21c:	33 0f       	add	r19, r19
+ 21e:	38 1b       	sub	r19, r24
+ 220:	39 5f       	subi	r19, 0xF9	; 249
+ 222:	66 23       	and	r22, r22
+ 224:	81 f0       	breq	.+32     	; 0x246 <RGB_LED_Driver_SetColour+0x38>
+ 226:	89 2f       	mov	r24, r25
+ 228:	90 e0       	ldi	r25, 0x00	; 0
+ 22a:	fc 01       	movw	r30, r24
+ 22c:	e9 5d       	subi	r30, 0xD9	; 217
+ 22e:	f7 4d       	sbci	r31, 0xD7	; 215
+ 230:	50 81       	ld	r21, Z
+ 232:	61 e0       	ldi	r22, 0x01	; 1
+ 234:	70 e0       	ldi	r23, 0x00	; 0
+ 236:	03 2e       	mov	r0, r19
+ 238:	02 c0       	rjmp	.+4      	; 0x23e <RGB_LED_Driver_SetColour+0x30>
+ 23a:	66 0f       	add	r22, r22
+ 23c:	77 1f       	adc	r23, r23
+ 23e:	0a 94       	dec	r0
+ 240:	e2 f7       	brpl	.-8      	; 0x23a <RGB_LED_Driver_SetColour+0x2c>
+ 242:	65 2b       	or	r22, r21
+ 244:	10 c0       	rjmp	.+32     	; 0x266 <RGB_LED_Driver_SetColour+0x58>
+ 246:	89 2f       	mov	r24, r25
+ 248:	90 e0       	ldi	r25, 0x00	; 0
+ 24a:	fc 01       	movw	r30, r24
+ 24c:	e9 5d       	subi	r30, 0xD9	; 217
+ 24e:	f7 4d       	sbci	r31, 0xD7	; 215
+ 250:	50 81       	ld	r21, Z
+ 252:	61 e0       	ldi	r22, 0x01	; 1
+ 254:	70 e0       	ldi	r23, 0x00	; 0
+ 256:	03 2e       	mov	r0, r19
+ 258:	02 c0       	rjmp	.+4      	; 0x25e <RGB_LED_Driver_SetColour+0x50>
+ 25a:	66 0f       	add	r22, r22
+ 25c:	77 1f       	adc	r23, r23
+ 25e:	0a 94       	dec	r0
+ 260:	e2 f7       	brpl	.-8      	; 0x25a <RGB_LED_Driver_SetColour+0x4c>
+ 262:	60 95       	com	r22
+ 264:	65 23       	and	r22, r21
+ 266:	fc 01       	movw	r30, r24
+ 268:	e9 5d       	subi	r30, 0xD9	; 217
+ 26a:	f7 4d       	sbci	r31, 0xD7	; 215
+ 26c:	60 83       	st	Z, r22
+ 26e:	44 23       	and	r20, r20
+ 270:	71 f0       	breq	.+28     	; 0x28e <RGB_LED_Driver_SetColour+0x80>
+ 272:	fc 01       	movw	r30, r24
+ 274:	e1 5e       	subi	r30, 0xE1	; 225
+ 276:	f7 4d       	sbci	r31, 0xD7	; 215
+ 278:	60 81       	ld	r22, Z
+ 27a:	41 e0       	ldi	r20, 0x01	; 1
+ 27c:	50 e0       	ldi	r21, 0x00	; 0
+ 27e:	03 2e       	mov	r0, r19
+ 280:	02 c0       	rjmp	.+4      	; 0x286 <RGB_LED_Driver_SetColour+0x78>
+ 282:	44 0f       	add	r20, r20
+ 284:	55 1f       	adc	r21, r21
+ 286:	0a 94       	dec	r0
+ 288:	e2 f7       	brpl	.-8      	; 0x282 <RGB_LED_Driver_SetColour+0x74>
+ 28a:	46 2b       	or	r20, r22
+ 28c:	0f c0       	rjmp	.+30     	; 0x2ac <RGB_LED_Driver_SetColour+0x9e>
+ 28e:	fc 01       	movw	r30, r24
+ 290:	e1 5e       	subi	r30, 0xE1	; 225
+ 292:	f7 4d       	sbci	r31, 0xD7	; 215
+ 294:	50 81       	ld	r21, Z
+ 296:	61 e0       	ldi	r22, 0x01	; 1
+ 298:	70 e0       	ldi	r23, 0x00	; 0
+ 29a:	03 2e       	mov	r0, r19
+ 29c:	02 c0       	rjmp	.+4      	; 0x2a2 <RGB_LED_Driver_SetColour+0x94>
+ 29e:	66 0f       	add	r22, r22
+ 2a0:	77 1f       	adc	r23, r23
+ 2a2:	0a 94       	dec	r0
+ 2a4:	e2 f7       	brpl	.-8      	; 0x29e <RGB_LED_Driver_SetColour+0x90>
+ 2a6:	46 2f       	mov	r20, r22
+ 2a8:	40 95       	com	r20
+ 2aa:	45 23       	and	r20, r21
+ 2ac:	fc 01       	movw	r30, r24
+ 2ae:	e1 5e       	subi	r30, 0xE1	; 225
+ 2b0:	f7 4d       	sbci	r31, 0xD7	; 215
+ 2b2:	40 83       	st	Z, r20
+ 2b4:	22 23       	and	r18, r18
+ 2b6:	79 f0       	breq	.+30     	; 0x2d6 <RGB_LED_Driver_SetColour+0xc8>
+ 2b8:	fc 01       	movw	r30, r24
+ 2ba:	e9 5e       	subi	r30, 0xE9	; 233
+ 2bc:	f7 4d       	sbci	r31, 0xD7	; 215
+ 2be:	60 81       	ld	r22, Z
+ 2c0:	41 e0       	ldi	r20, 0x01	; 1
+ 2c2:	50 e0       	ldi	r21, 0x00	; 0
+ 2c4:	fa 01       	movw	r30, r20
+ 2c6:	02 c0       	rjmp	.+4      	; 0x2cc <RGB_LED_Driver_SetColour+0xbe>
+ 2c8:	ee 0f       	add	r30, r30
+ 2ca:	ff 1f       	adc	r31, r31
+ 2cc:	3a 95       	dec	r19
+ 2ce:	e2 f7       	brpl	.-8      	; 0x2c8 <RGB_LED_Driver_SetColour+0xba>
+ 2d0:	9f 01       	movw	r18, r30
+ 2d2:	26 2b       	or	r18, r22
+ 2d4:	0f c0       	rjmp	.+30     	; 0x2f4 <RGB_LED_Driver_SetColour+0xe6>
+ 2d6:	fc 01       	movw	r30, r24
+ 2d8:	e9 5e       	subi	r30, 0xE9	; 233
+ 2da:	f7 4d       	sbci	r31, 0xD7	; 215
+ 2dc:	40 81       	ld	r20, Z
+ 2de:	61 e0       	ldi	r22, 0x01	; 1
+ 2e0:	70 e0       	ldi	r23, 0x00	; 0
+ 2e2:	fb 01       	movw	r30, r22
+ 2e4:	02 c0       	rjmp	.+4      	; 0x2ea <RGB_LED_Driver_SetColour+0xdc>
+ 2e6:	ee 0f       	add	r30, r30
+ 2e8:	ff 1f       	adc	r31, r31
+ 2ea:	3a 95       	dec	r19
+ 2ec:	e2 f7       	brpl	.-8      	; 0x2e6 <RGB_LED_Driver_SetColour+0xd8>
+ 2ee:	9f 01       	movw	r18, r30
+ 2f0:	20 95       	com	r18
+ 2f2:	24 23       	and	r18, r20
+ 2f4:	fc 01       	movw	r30, r24
+ 2f6:	e9 5e       	subi	r30, 0xE9	; 233
+ 2f8:	f7 4d       	sbci	r31, 0xD7	; 215
+ 2fa:	20 83       	st	Z, r18
+ 2fc:	08 95       	ret
+
+000002fe <RGB_LED_Driver_SetColour_FromEnum>:
+ 2fe:	46 2f       	mov	r20, r22
+ 300:	50 e0       	ldi	r21, 0x00	; 0
+ 302:	47 30       	cpi	r20, 0x07	; 7
+ 304:	51 05       	cpc	r21, r1
+ 306:	78 f5       	brcc	.+94     	; 0x366 <RGB_LED_Driver_SetColour_FromEnum+0x68>
+ 308:	fa 01       	movw	r30, r20
+ 30a:	e0 5b       	subi	r30, 0xB0	; 176
+ 30c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 30e:	0c 94 8c 03 	jmp	0x718	; 0x718 <__tablejump2__>
+ 312:	20 e0       	ldi	r18, 0x00	; 0
+ 314:	40 e0       	ldi	r20, 0x00	; 0
+ 316:	61 e0       	ldi	r22, 0x01	; 1
+ 318:	0e 94 07 01 	call	0x20e	; 0x20e <RGB_LED_Driver_SetColour>
+ 31c:	08 95       	ret
+ 31e:	21 e0       	ldi	r18, 0x01	; 1
+ 320:	40 e0       	ldi	r20, 0x00	; 0
+ 322:	60 e0       	ldi	r22, 0x00	; 0
+ 324:	0e 94 07 01 	call	0x20e	; 0x20e <RGB_LED_Driver_SetColour>
+ 328:	08 95       	ret
+ 32a:	20 e0       	ldi	r18, 0x00	; 0
+ 32c:	41 e0       	ldi	r20, 0x01	; 1
+ 32e:	61 e0       	ldi	r22, 0x01	; 1
+ 330:	0e 94 07 01 	call	0x20e	; 0x20e <RGB_LED_Driver_SetColour>
+ 334:	08 95       	ret
+ 336:	20 e0       	ldi	r18, 0x00	; 0
+ 338:	41 e0       	ldi	r20, 0x01	; 1
+ 33a:	60 e0       	ldi	r22, 0x00	; 0
+ 33c:	0e 94 07 01 	call	0x20e	; 0x20e <RGB_LED_Driver_SetColour>
+ 340:	08 95       	ret
+ 342:	21 e0       	ldi	r18, 0x01	; 1
+ 344:	40 e0       	ldi	r20, 0x00	; 0
+ 346:	61 e0       	ldi	r22, 0x01	; 1
+ 348:	0e 94 07 01 	call	0x20e	; 0x20e <RGB_LED_Driver_SetColour>
+ 34c:	08 95       	ret
+ 34e:	21 e0       	ldi	r18, 0x01	; 1
+ 350:	41 e0       	ldi	r20, 0x01	; 1
+ 352:	60 e0       	ldi	r22, 0x00	; 0
+ 354:	0e 94 07 01 	call	0x20e	; 0x20e <RGB_LED_Driver_SetColour>
+ 358:	08 95       	ret
+ 35a:	21 e0       	ldi	r18, 0x01	; 1
+ 35c:	41 e0       	ldi	r20, 0x01	; 1
+ 35e:	61 e0       	ldi	r22, 0x01	; 1
+ 360:	0e 94 07 01 	call	0x20e	; 0x20e <RGB_LED_Driver_SetColour>
+ 364:	08 95       	ret
+ 366:	20 e0       	ldi	r18, 0x00	; 0
+ 368:	40 e0       	ldi	r20, 0x00	; 0
+ 36a:	60 e0       	ldi	r22, 0x00	; 0
+ 36c:	0e 94 07 01 	call	0x20e	; 0x20e <RGB_LED_Driver_SetColour>
+ 370:	08 95       	ret
+
+00000372 <__vector_12>:
+ 372:	1f 92       	push	r1
+ 374:	0f 92       	push	r0
+ 376:	0f b6       	in	r0, 0x3f	; 63
+ 378:	0f 92       	push	r0
+ 37a:	11 24       	eor	r1, r1
+ 37c:	2f 93       	push	r18
+ 37e:	3f 93       	push	r19
+ 380:	4f 93       	push	r20
+ 382:	8f 93       	push	r24
+ 384:	9f 93       	push	r25
+ 386:	ef 93       	push	r30
+ 388:	ff 93       	push	r31
+ 38a:	f8 94       	cli
+ 38c:	40 91 16 28 	lds	r20, 0x2816	; 0x802816 <ledCntr>
+ 390:	44 23       	and	r20, r20
+ 392:	19 f0       	breq	.+6      	; 0x39a <__vector_12+0x28>
+ 394:	41 30       	cpi	r20, 0x01	; 1
+ 396:	39 f0       	breq	.+14     	; 0x3a6 <__vector_12+0x34>
+ 398:	03 c0       	rjmp	.+6      	; 0x3a0 <__vector_12+0x2e>
+ 39a:	27 e2       	ldi	r18, 0x27	; 39
+ 39c:	38 e2       	ldi	r19, 0x28	; 40
+ 39e:	05 c0       	rjmp	.+10     	; 0x3aa <__vector_12+0x38>
+ 3a0:	27 e1       	ldi	r18, 0x17	; 23
+ 3a2:	38 e2       	ldi	r19, 0x28	; 40
+ 3a4:	02 c0       	rjmp	.+4      	; 0x3aa <__vector_12+0x38>
+ 3a6:	2f e1       	ldi	r18, 0x1F	; 31
+ 3a8:	38 e2       	ldi	r19, 0x28	; 40
+ 3aa:	90 e0       	ldi	r25, 0x00	; 0
+ 3ac:	0b c0       	rjmp	.+22     	; 0x3c4 <__vector_12+0x52>
+ 3ae:	80 91 c3 08 	lds	r24, 0x08C3	; 0x8008c3 <__TEXT_REGION_LENGTH__+0x7f48c3>
+ 3b2:	85 ff       	sbrs	r24, 5
+ 3b4:	fc cf       	rjmp	.-8      	; 0x3ae <__vector_12+0x3c>
+ 3b6:	f9 01       	movw	r30, r18
+ 3b8:	e9 0f       	add	r30, r25
+ 3ba:	f1 1d       	adc	r31, r1
+ 3bc:	80 81       	ld	r24, Z
+ 3be:	80 93 c4 08 	sts	0x08C4, r24	; 0x8008c4 <__TEXT_REGION_LENGTH__+0x7f48c4>
+ 3c2:	9f 5f       	subi	r25, 0xFF	; 255
+ 3c4:	98 30       	cpi	r25, 0x08	; 8
+ 3c6:	98 f3       	brcs	.-26     	; 0x3ae <__vector_12+0x3c>
+ 3c8:	87 e0       	ldi	r24, 0x07	; 7
+ 3ca:	80 93 86 04 	sts	0x0486, r24	; 0x800486 <__TEXT_REGION_LENGTH__+0x7f4486>
+ 3ce:	80 e0       	ldi	r24, 0x00	; 0
+ 3d0:	02 c0       	rjmp	.+4      	; 0x3d6 <__vector_12+0x64>
+ 3d2:	00 00       	nop
+ 3d4:	8f 5f       	subi	r24, 0xFF	; 255
+ 3d6:	80 32       	cpi	r24, 0x20	; 32
+ 3d8:	e0 f3       	brcs	.-8      	; 0x3d2 <__vector_12+0x60>
+ 3da:	e0 e0       	ldi	r30, 0x00	; 0
+ 3dc:	f4 e0       	ldi	r31, 0x04	; 4
+ 3de:	80 e8       	ldi	r24, 0x80	; 128
+ 3e0:	86 83       	std	Z+6, r24	; 0x06
+ 3e2:	85 83       	std	Z+5, r24	; 0x05
+ 3e4:	80 e0       	ldi	r24, 0x00	; 0
+ 3e6:	02 c0       	rjmp	.+4      	; 0x3ec <__vector_12+0x7a>
+ 3e8:	00 00       	nop
+ 3ea:	8f 5f       	subi	r24, 0xFF	; 255
+ 3ec:	80 32       	cpi	r24, 0x20	; 32
+ 3ee:	e0 f3       	brcs	.-8      	; 0x3e8 <__vector_12+0x76>
+ 3f0:	81 e0       	ldi	r24, 0x01	; 1
+ 3f2:	90 e0       	ldi	r25, 0x00	; 0
+ 3f4:	04 2e       	mov	r0, r20
+ 3f6:	02 c0       	rjmp	.+4      	; 0x3fc <__vector_12+0x8a>
+ 3f8:	88 0f       	add	r24, r24
+ 3fa:	99 1f       	adc	r25, r25
+ 3fc:	0a 94       	dec	r0
+ 3fe:	e2 f7       	brpl	.-8      	; 0x3f8 <__vector_12+0x86>
+ 400:	80 93 85 04 	sts	0x0485, r24	; 0x800485 <__TEXT_REGION_LENGTH__+0x7f4485>
+ 404:	42 30       	cpi	r20, 0x02	; 2
+ 406:	10 f4       	brcc	.+4      	; 0x40c <__LOCK_REGION_LENGTH__+0xc>
+ 408:	4f 5f       	subi	r20, 0xFF	; 255
+ 40a:	01 c0       	rjmp	.+2      	; 0x40e <__LOCK_REGION_LENGTH__+0xe>
+ 40c:	40 e0       	ldi	r20, 0x00	; 0
+ 40e:	40 93 16 28 	sts	0x2816, r20	; 0x802816 <ledCntr>
+ 412:	e0 e8       	ldi	r30, 0x80	; 128
+ 414:	fa e0       	ldi	r31, 0x0A	; 10
+ 416:	86 81       	ldd	r24, Z+6	; 0x06
+ 418:	81 60       	ori	r24, 0x01	; 1
+ 41a:	86 83       	std	Z+6, r24	; 0x06
+ 41c:	78 94       	sei
+ 41e:	ff 91       	pop	r31
+ 420:	ef 91       	pop	r30
+ 422:	9f 91       	pop	r25
+ 424:	8f 91       	pop	r24
+ 426:	4f 91       	pop	r20
+ 428:	3f 91       	pop	r19
+ 42a:	2f 91       	pop	r18
+ 42c:	0f 90       	pop	r0
+ 42e:	0f be       	out	0x3f, r0	; 63
+ 430:	0f 90       	pop	r0
+ 432:	1f 90       	pop	r1
+ 434:	18 95       	reti
+
+00000436 <RGB_LED_Driver_Init>:
+ 436:	80 ed       	ldi	r24, 0xD0	; 208
+ 438:	80 93 01 04 	sts	0x0401, r24	; 0x800401 <__TEXT_REGION_LENGTH__+0x7f4401>
+ 43c:	e0 e8       	ldi	r30, 0x80	; 128
+ 43e:	f4 e0       	ldi	r31, 0x04	; 4
+ 440:	87 e0       	ldi	r24, 0x07	; 7
+ 442:	81 83       	std	Z+1, r24	; 0x01
+ 444:	86 83       	std	Z+6, r24	; 0x06
+ 446:	e0 ec       	ldi	r30, 0xC0	; 192
+ 448:	f8 e0       	ldi	r31, 0x08	; 8
+ 44a:	80 81       	ld	r24, Z
+ 44c:	80 63       	ori	r24, 0x30	; 48
+ 44e:	80 83       	st	Z, r24
+ 450:	81 81       	ldd	r24, Z+1	; 0x01
+ 452:	80 68       	ori	r24, 0x80	; 128
+ 454:	81 83       	std	Z+1, r24	; 0x01
+ 456:	80 81       	ld	r24, Z
+ 458:	81 60       	ori	r24, 0x01	; 1
+ 45a:	80 83       	st	Z, r24
+ 45c:	85 e0       	ldi	r24, 0x05	; 5
+ 45e:	80 93 00 0a 	sts	0x0A00, r24	; 0x800a00 <__TEXT_REGION_LENGTH__+0x7f4a00>
+ 462:	e0 e8       	ldi	r30, 0x80	; 128
+ 464:	fa e0       	ldi	r31, 0x0A	; 10
+ 466:	80 e2       	ldi	r24, 0x20	; 32
+ 468:	9e e4       	ldi	r25, 0x4E	; 78
+ 46a:	84 87       	std	Z+12, r24	; 0x0c
+ 46c:	95 87       	std	Z+13, r25	; 0x0d
+ 46e:	80 81       	ld	r24, Z
+ 470:	85 60       	ori	r24, 0x05	; 5
+ 472:	80 83       	st	Z, r24
+ 474:	08 95       	ret
+
+00000476 <RGB_LED_Driver_Begin>:
+ 476:	e0 e8       	ldi	r30, 0x80	; 128
+ 478:	fa e0       	ldi	r31, 0x0A	; 10
+ 47a:	85 81       	ldd	r24, Z+5	; 0x05
+ 47c:	81 60       	ori	r24, 0x01	; 1
+ 47e:	85 83       	std	Z+5, r24	; 0x05
+ 480:	90 e0       	ldi	r25, 0x00	; 0
+ 482:	07 c0       	rjmp	.+14     	; 0x492 <RGB_LED_Driver_Begin+0x1c>
+ 484:	80 91 c3 08 	lds	r24, 0x08C3	; 0x8008c3 <__TEXT_REGION_LENGTH__+0x7f48c3>
+ 488:	85 ff       	sbrs	r24, 5
+ 48a:	fc cf       	rjmp	.-8      	; 0x484 <RGB_LED_Driver_Begin+0xe>
+ 48c:	10 92 c4 08 	sts	0x08C4, r1	; 0x8008c4 <__TEXT_REGION_LENGTH__+0x7f48c4>
+ 490:	9f 5f       	subi	r25, 0xFF	; 255
+ 492:	98 30       	cpi	r25, 0x08	; 8
+ 494:	b8 f3       	brcs	.-18     	; 0x484 <RGB_LED_Driver_Begin+0xe>
+ 496:	80 e0       	ldi	r24, 0x00	; 0
+ 498:	02 c0       	rjmp	.+4      	; 0x49e <RGB_LED_Driver_Begin+0x28>
+ 49a:	00 00       	nop
+ 49c:	8f 5f       	subi	r24, 0xFF	; 255
+ 49e:	80 32       	cpi	r24, 0x20	; 32
+ 4a0:	e0 f3       	brcs	.-8      	; 0x49a <RGB_LED_Driver_Begin+0x24>
+ 4a2:	e0 e0       	ldi	r30, 0x00	; 0
+ 4a4:	f4 e0       	ldi	r31, 0x04	; 4
+ 4a6:	80 e8       	ldi	r24, 0x80	; 128
+ 4a8:	86 83       	std	Z+6, r24	; 0x06
+ 4aa:	85 83       	std	Z+5, r24	; 0x05
+ 4ac:	08 95       	ret
+
+000004ae <RGB_LED_Driver_Set_Key>:
+	}
+}
+
+/*表示色を変更*/
+void RGB_LED_Driver_Set_Key(uint8_t idx,enum Col_e colour){
+	if(idx > 23)return;/*範囲外*/
+ 4ae:	88 31       	cpi	r24, 0x18	; 24
+ 4b0:	20 f4       	brcc	.+8      	; 0x4ba <RGB_LED_Driver_Set_Key+0xc>
+	
+	uint8_t pos = 17 + (idx << 1);	/*位置*/
+ 4b2:	88 0f       	add	r24, r24
+	
+	RGB_LED_Driver_SetColour_FromEnum(pos,colour);
+ 4b4:	8f 5e       	subi	r24, 0xEF	; 239
+ 4b6:	0e 94 7f 01 	call	0x2fe	; 0x2fe <RGB_LED_Driver_SetColour_FromEnum>
+ 4ba:	08 95       	ret
+
+000004bc <main>:
+int main(void)
+{
+	/*CLOCK Init*/
+	//clockInit();
+	
+	MCU_Init();
+ 4bc:	0e 94 93 02 	call	0x526	; 0x526 <MCU_Init>
+	USART_Driver_Init();
+ 4c0:	0e 94 13 03 	call	0x626	; 0x626 <USART_Driver_Init>
+	RGB_LED_Driver_Init();
+ 4c4:	0e 94 1b 02 	call	0x436	; 0x436 <RGB_LED_Driver_Init>
+	IR_Sensor_Driver_Init();
+ 4c8:	0e 94 de 00 	call	0x1bc	; 0x1bc <IR_Sensor_Driver_Init>
+	
+	sei();
+ 4cc:	78 94       	sei
+	
+	USART_Driver_Begin(USART_DEBUG);
+ 4ce:	81 e0       	ldi	r24, 0x01	; 1
+ 4d0:	0e 94 55 03 	call	0x6aa	; 0x6aa <USART_Driver_Begin>
+	RGB_LED_Driver_Begin();
+ 4d4:	0e 94 3b 02 	call	0x476	; 0x476 <RGB_LED_Driver_Begin>
+	IR_Sensor_Driver_Begin();
+ 4d8:	0e 94 01 01 	call	0x202	; 0x202 <IR_Sensor_Driver_Begin>
+		RGB_LED_Driver_Set_Separater(3 + 4 * i,COLOUR_MAGENTA);
+	}
+	*/
+	while(1){
+		//printf("Hello,World!\n");
+		for(uint8_t i = 0;i < 24;i++){
+ 4dc:	c0 e0       	ldi	r28, 0x00	; 0
+ 4de:	0e c0       	rjmp	.+28     	; 0x4fc <main+0x40>
+			RGB_LED_Driver_Set_Key(i,COLOUR_YELLOW);
+ 4e0:	62 e0       	ldi	r22, 0x02	; 2
+ 4e2:	8c 2f       	mov	r24, r28
+ 4e4:	0e 94 57 02 	call	0x4ae	; 0x4ae <RGB_LED_Driver_Set_Key>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 4e8:	2f ef       	ldi	r18, 0xFF	; 255
+ 4ea:	81 ee       	ldi	r24, 0xE1	; 225
+ 4ec:	94 e0       	ldi	r25, 0x04	; 4
+ 4ee:	21 50       	subi	r18, 0x01	; 1
+ 4f0:	80 40       	sbci	r24, 0x00	; 0
+ 4f2:	90 40       	sbci	r25, 0x00	; 0
+ 4f4:	e1 f7       	brne	.-8      	; 0x4ee <main+0x32>
+ 4f6:	00 c0       	rjmp	.+0      	; 0x4f8 <main+0x3c>
+ 4f8:	00 00       	nop
+		RGB_LED_Driver_Set_Separater(3 + 4 * i,COLOUR_MAGENTA);
+	}
+	*/
+	while(1){
+		//printf("Hello,World!\n");
+		for(uint8_t i = 0;i < 24;i++){
+ 4fa:	cf 5f       	subi	r28, 0xFF	; 255
+ 4fc:	c8 31       	cpi	r28, 0x18	; 24
+ 4fe:	80 f3       	brcs	.-32     	; 0x4e0 <main+0x24>
+ 500:	c0 e0       	ldi	r28, 0x00	; 0
+ 502:	0e c0       	rjmp	.+28     	; 0x520 <main+0x64>
+			RGB_LED_Driver_Set_Key(i,COLOUR_YELLOW);
+			_delay_ms(80);
+		}
+		for(uint8_t i = 0;i < 24;i++){
+			RGB_LED_Driver_Set_Key(i,COLOUR_BLACK);
+ 504:	67 e0       	ldi	r22, 0x07	; 7
+ 506:	8c 2f       	mov	r24, r28
+ 508:	0e 94 57 02 	call	0x4ae	; 0x4ae <RGB_LED_Driver_Set_Key>
+ 50c:	2f ef       	ldi	r18, 0xFF	; 255
+ 50e:	81 ee       	ldi	r24, 0xE1	; 225
+ 510:	94 e0       	ldi	r25, 0x04	; 4
+ 512:	21 50       	subi	r18, 0x01	; 1
+ 514:	80 40       	sbci	r24, 0x00	; 0
+ 516:	90 40       	sbci	r25, 0x00	; 0
+ 518:	e1 f7       	brne	.-8      	; 0x512 <main+0x56>
+ 51a:	00 c0       	rjmp	.+0      	; 0x51c <main+0x60>
+ 51c:	00 00       	nop
+		//printf("Hello,World!\n");
+		for(uint8_t i = 0;i < 24;i++){
+			RGB_LED_Driver_Set_Key(i,COLOUR_YELLOW);
+			_delay_ms(80);
+		}
+		for(uint8_t i = 0;i < 24;i++){
+ 51e:	cf 5f       	subi	r28, 0xFF	; 255
+ 520:	c8 31       	cpi	r28, 0x18	; 24
+ 522:	80 f3       	brcs	.-32     	; 0x504 <main+0x48>
+ 524:	db cf       	rjmp	.-74     	; 0x4dc <main+0x20>
+
+00000526 <MCU_Init>:
+
+#include "MCU_Init.h"
+
+void MCU_Init(void){
+	/*CPUクロックを20MHzに設定*/
+	CCP = CCP_IOREG_gc;	/*保護レジスタへの書き込み*/
+ 526:	88 ed       	ldi	r24, 0xD8	; 216
+ 528:	84 bf       	out	0x34, r24	; 52
+	CLKCTRL.MCLKCTRLB = 0x00;	/*分周を無効化*/
+ 52a:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__TEXT_REGION_LENGTH__+0x7f4061>
+	
+	/*ラウンドロビン割り込みを有効化*/
+	CCP = CCP_IOREG_gc;	/*保護レジスタへの書き込み*/
+ 52e:	84 bf       	out	0x34, r24	; 52
+	CPUINT.CTRLA |= CPUINT_LVL0RR_bm;	/*ラウンドロビン割り込み*/
+ 530:	e0 e1       	ldi	r30, 0x10	; 16
+ 532:	f1 e0       	ldi	r31, 0x01	; 1
+ 534:	80 81       	ld	r24, Z
+ 536:	81 60       	ori	r24, 0x01	; 1
+ 538:	80 83       	st	Z, r24
+		
+	/*全体割り込みを許可*/
+	sei();
+ 53a:	78 94       	sei
+ 53c:	08 95       	ret
+
+0000053e <__vector_17>:
+		case USART_DEBUG:
+		default:
+		USART0.CTRLB &= ~(USART_RXEN_bm | USART_TXEN_bm);	/*送受信を不許可*/
+		/*割り込み設定*/
+		#if USART_USE_INT
+		USART2.CTRLA &= ~USART_RXCIE_bm;	/*受信割り込み不許可*/
+ 53e:	1f 92       	push	r1
+ 540:	0f 92       	push	r0
+ 542:	0f b6       	in	r0, 0x3f	; 63
+ 544:	0f 92       	push	r0
+ 546:	11 24       	eor	r1, r1
+ 548:	2f 93       	push	r18
+ 54a:	8f 93       	push	r24
+ 54c:	9f 93       	push	r25
+ 54e:	af 93       	push	r26
+ 550:	bf 93       	push	r27
+ 552:	ef 93       	push	r30
+ 554:	ff 93       	push	r31
+ 556:	80 91 00 08 	lds	r24, 0x0800	; 0x800800 <__TEXT_REGION_LENGTH__+0x7f4800>
+ 55a:	ee e2       	ldi	r30, 0x2E	; 46
+ 55c:	f9 e2       	ldi	r31, 0x29	; 41
+ 55e:	a0 81       	ld	r26, Z
+ 560:	b1 81       	ldd	r27, Z+1	; 0x01
+ 562:	8c 93       	st	X, r24
+ 564:	80 81       	ld	r24, Z
+ 566:	91 81       	ldd	r25, Z+1	; 0x01
+ 568:	01 96       	adiw	r24, 0x01	; 1
+ 56a:	80 83       	st	Z, r24
+ 56c:	91 83       	std	Z+1, r25	; 0x01
+ 56e:	8e 17       	cp	r24, r30
+ 570:	9f 07       	cpc	r25, r31
+ 572:	31 f4       	brne	.+12     	; 0x580 <__vector_17+0x42>
+ 574:	8f e2       	ldi	r24, 0x2F	; 47
+ 576:	98 e2       	ldi	r25, 0x28	; 40
+ 578:	80 93 2e 29 	sts	0x292E, r24	; 0x80292e <RingBuffer_DEBUG+0xff>
+ 57c:	90 93 2f 29 	sts	0x292F, r25	; 0x80292f <RingBuffer_DEBUG+0x100>
+ 580:	9f b7       	in	r25, 0x3f	; 63
+ 582:	f8 94       	cli
+ 584:	81 e0       	ldi	r24, 0x01	; 1
+ 586:	06 c0       	rjmp	.+12     	; 0x594 <__vector_17+0x56>
+ 588:	e2 e3       	ldi	r30, 0x32	; 50
+ 58a:	f9 e2       	ldi	r31, 0x29	; 41
+ 58c:	80 81       	ld	r24, Z
+ 58e:	8f 5f       	subi	r24, 0xFF	; 255
+ 590:	80 83       	st	Z, r24
+ 592:	80 e0       	ldi	r24, 0x00	; 0
+ 594:	81 11       	cpse	r24, r1
+ 596:	f8 cf       	rjmp	.-16     	; 0x588 <__vector_17+0x4a>
+ 598:	9f bf       	out	0x3f, r25	; 63
+ 59a:	ff 91       	pop	r31
+ 59c:	ef 91       	pop	r30
+ 59e:	bf 91       	pop	r27
+ 5a0:	af 91       	pop	r26
+ 5a2:	9f 91       	pop	r25
+ 5a4:	8f 91       	pop	r24
+ 5a6:	2f 91       	pop	r18
+ 5a8:	0f 90       	pop	r0
+ 5aa:	0f be       	out	0x3f, r0	; 63
+ 5ac:	0f 90       	pop	r0
+ 5ae:	1f 90       	pop	r1
+ 5b0:	18 95       	reti
+
+000005b2 <__vector_31>:
+ 5b2:	1f 92       	push	r1
+ 5b4:	0f 92       	push	r0
+ 5b6:	0f b6       	in	r0, 0x3f	; 63
+ 5b8:	0f 92       	push	r0
+ 5ba:	11 24       	eor	r1, r1
+ 5bc:	2f 93       	push	r18
+ 5be:	8f 93       	push	r24
+ 5c0:	9f 93       	push	r25
+ 5c2:	af 93       	push	r26
+ 5c4:	bf 93       	push	r27
+ 5c6:	ef 93       	push	r30
+ 5c8:	ff 93       	push	r31
+ 5ca:	80 91 40 08 	lds	r24, 0x0840	; 0x800840 <__TEXT_REGION_LENGTH__+0x7f4840>
+ 5ce:	e2 e3       	ldi	r30, 0x32	; 50
+ 5d0:	fa e2       	ldi	r31, 0x2A	; 42
+ 5d2:	a0 81       	ld	r26, Z
+ 5d4:	b1 81       	ldd	r27, Z+1	; 0x01
+ 5d6:	8c 93       	st	X, r24
+ 5d8:	80 81       	ld	r24, Z
+ 5da:	91 81       	ldd	r25, Z+1	; 0x01
+ 5dc:	01 96       	adiw	r24, 0x01	; 1
+ 5de:	80 83       	st	Z, r24
+ 5e0:	91 83       	std	Z+1, r25	; 0x01
+ 5e2:	8e 17       	cp	r24, r30
+ 5e4:	9f 07       	cpc	r25, r31
+ 5e6:	31 f4       	brne	.+12     	; 0x5f4 <__vector_31+0x42>
+ 5e8:	83 e3       	ldi	r24, 0x33	; 51
+ 5ea:	99 e2       	ldi	r25, 0x29	; 41
+ 5ec:	80 93 32 2a 	sts	0x2A32, r24	; 0x802a32 <RingBuffer_MIDI+0xff>
+ 5f0:	90 93 33 2a 	sts	0x2A33, r25	; 0x802a33 <RingBuffer_MIDI+0x100>
+ 5f4:	9f b7       	in	r25, 0x3f	; 63
+ 5f6:	f8 94       	cli
+ 5f8:	81 e0       	ldi	r24, 0x01	; 1
+ 5fa:	06 c0       	rjmp	.+12     	; 0x608 <__vector_31+0x56>
+ 5fc:	e6 e3       	ldi	r30, 0x36	; 54
+ 5fe:	fa e2       	ldi	r31, 0x2A	; 42
+ 600:	80 81       	ld	r24, Z
+ 602:	8f 5f       	subi	r24, 0xFF	; 255
+ 604:	80 83       	st	Z, r24
+ 606:	80 e0       	ldi	r24, 0x00	; 0
+ 608:	81 11       	cpse	r24, r1
+ 60a:	f8 cf       	rjmp	.-16     	; 0x5fc <__vector_31+0x4a>
+ 60c:	9f bf       	out	0x3f, r25	; 63
+ 60e:	ff 91       	pop	r31
+ 610:	ef 91       	pop	r30
+ 612:	bf 91       	pop	r27
+ 614:	af 91       	pop	r26
+ 616:	9f 91       	pop	r25
+ 618:	8f 91       	pop	r24
+ 61a:	2f 91       	pop	r18
+ 61c:	0f 90       	pop	r0
+ 61e:	0f be       	out	0x3f, r0	; 63
+ 620:	0f 90       	pop	r0
+ 622:	1f 90       	pop	r1
+ 624:	18 95       	reti
+
+00000626 <USART_Driver_Init>:
+ 626:	e0 ea       	ldi	r30, 0xA0	; 160
+ 628:	f4 e0       	ldi	r31, 0x04	; 4
+ 62a:	91 e0       	ldi	r25, 0x01	; 1
+ 62c:	91 83       	std	Z+1, r25	; 0x01
+ 62e:	82 e0       	ldi	r24, 0x02	; 2
+ 630:	82 83       	std	Z+2, r24	; 0x02
+ 632:	e0 e0       	ldi	r30, 0x00	; 0
+ 634:	f4 e0       	ldi	r31, 0x04	; 4
+ 636:	91 83       	std	Z+1, r25	; 0x01
+ 638:	82 83       	std	Z+2, r24	; 0x02
+ 63a:	e0 e4       	ldi	r30, 0x40	; 64
+ 63c:	f8 e0       	ldi	r31, 0x08	; 8
+ 63e:	80 e0       	ldi	r24, 0x00	; 0
+ 640:	9a e0       	ldi	r25, 0x0A	; 10
+ 642:	80 87       	std	Z+8, r24	; 0x08
+ 644:	91 87       	std	Z+9, r25	; 0x09
+ 646:	83 e0       	ldi	r24, 0x03	; 3
+ 648:	87 83       	std	Z+7, r24	; 0x07
+ 64a:	e0 e0       	ldi	r30, 0x00	; 0
+ 64c:	f8 e0       	ldi	r31, 0x08	; 8
+ 64e:	23 e2       	ldi	r18, 0x23	; 35
+ 650:	38 e0       	ldi	r19, 0x08	; 8
+ 652:	20 87       	std	Z+8, r18	; 0x08
+ 654:	31 87       	std	Z+9, r19	; 0x09
+ 656:	87 83       	std	Z+7, r24	; 0x07
+ 658:	2f b7       	in	r18, 0x3f	; 63
+ 65a:	f8 94       	cli
+ 65c:	81 e0       	ldi	r24, 0x01	; 1
+ 65e:	0d c0       	rjmp	.+26     	; 0x67a <USART_Driver_Init+0x54>
+ 660:	83 e3       	ldi	r24, 0x33	; 51
+ 662:	99 e2       	ldi	r25, 0x29	; 41
+ 664:	80 93 32 2a 	sts	0x2A32, r24	; 0x802a32 <RingBuffer_MIDI+0xff>
+ 668:	90 93 33 2a 	sts	0x2A33, r25	; 0x802a33 <RingBuffer_MIDI+0x100>
+ 66c:	80 93 34 2a 	sts	0x2A34, r24	; 0x802a34 <RingBuffer_MIDI+0x101>
+ 670:	90 93 35 2a 	sts	0x2A35, r25	; 0x802a35 <RingBuffer_MIDI+0x102>
+ 674:	10 92 36 2a 	sts	0x2A36, r1	; 0x802a36 <RingBuffer_MIDI+0x103>
+ 678:	80 e0       	ldi	r24, 0x00	; 0
+ 67a:	81 11       	cpse	r24, r1
+ 67c:	f1 cf       	rjmp	.-30     	; 0x660 <USART_Driver_Init+0x3a>
+ 67e:	2f bf       	out	0x3f, r18	; 63
+ 680:	2f b7       	in	r18, 0x3f	; 63
+ 682:	f8 94       	cli
+ 684:	81 e0       	ldi	r24, 0x01	; 1
+ 686:	0d c0       	rjmp	.+26     	; 0x6a2 <USART_Driver_Init+0x7c>
+ 688:	8f e2       	ldi	r24, 0x2F	; 47
+ 68a:	98 e2       	ldi	r25, 0x28	; 40
+ 68c:	80 93 2e 29 	sts	0x292E, r24	; 0x80292e <RingBuffer_DEBUG+0xff>
+ 690:	90 93 2f 29 	sts	0x292F, r25	; 0x80292f <RingBuffer_DEBUG+0x100>
+ 694:	80 93 30 29 	sts	0x2930, r24	; 0x802930 <RingBuffer_DEBUG+0x101>
+ 698:	90 93 31 29 	sts	0x2931, r25	; 0x802931 <RingBuffer_DEBUG+0x102>
+ 69c:	10 92 32 29 	sts	0x2932, r1	; 0x802932 <RingBuffer_DEBUG+0x103>
+ 6a0:	80 e0       	ldi	r24, 0x00	; 0
+ 6a2:	81 11       	cpse	r24, r1
+ 6a4:	f1 cf       	rjmp	.-30     	; 0x688 <USART_Driver_Init+0x62>
+ 6a6:	2f bf       	out	0x3f, r18	; 63
+ 6a8:	08 95       	ret
+
+000006aa <USART_Driver_Begin>:
+ 6aa:	81 11       	cpse	r24, r1
+ 6ac:	07 c0       	rjmp	.+14     	; 0x6bc <USART_Driver_Begin+0x12>
+ 6ae:	e0 e4       	ldi	r30, 0x40	; 64
+ 6b0:	f8 e0       	ldi	r31, 0x08	; 8
+ 6b2:	80 ec       	ldi	r24, 0xC0	; 192
+ 6b4:	86 83       	std	Z+6, r24	; 0x06
+ 6b6:	80 e8       	ldi	r24, 0x80	; 128
+ 6b8:	85 83       	std	Z+5, r24	; 0x05
+ 6ba:	08 95       	ret
+ 6bc:	e0 e0       	ldi	r30, 0x00	; 0
+ 6be:	f8 e0       	ldi	r31, 0x08	; 8
+ 6c0:	80 ec       	ldi	r24, 0xC0	; 192
+ 6c2:	86 83       	std	Z+6, r24	; 0x06
+ 6c4:	80 e8       	ldi	r24, 0x80	; 128
+ 6c6:	85 83       	std	Z+5, r24	; 0x05
+ 6c8:	80 e0       	ldi	r24, 0x00	; 0
+ 6ca:	98 e2       	ldi	r25, 0x28	; 40
+ 6cc:	80 93 39 2a 	sts	0x2A39, r24	; 0x802a39 <__iob+0x2>
+ 6d0:	90 93 3a 2a 	sts	0x2A3A, r25	; 0x802a3a <__iob+0x3>
+ 6d4:	08 95       	ret
+
+000006d6 <USART_Driver_Putc>:
+	}	
+}
+
+/*USART1文字送信*/
+void USART_Driver_Putc(enum Usart_Sel_e dev,const char src){
+	switch(dev){
+ 6d6:	88 23       	and	r24, r24
+ 6d8:	19 f0       	breq	.+6      	; 0x6e0 <USART_Driver_Putc+0xa>
+ 6da:	81 30       	cpi	r24, 0x01	; 1
+ 6dc:	39 f0       	breq	.+14     	; 0x6ec <USART_Driver_Putc+0x16>
+ 6de:	08 95       	ret
+		case USART_MIDI:
+			while(!(USART2.STATUS & USART_DREIF_bm));
+ 6e0:	80 91 44 08 	lds	r24, 0x0844	; 0x800844 <__TEXT_REGION_LENGTH__+0x7f4844>
+ 6e4:	85 ff       	sbrs	r24, 5
+ 6e6:	fc cf       	rjmp	.-8      	; 0x6e0 <USART_Driver_Putc+0xa>
+			USART2.TXDATAL = src;
+ 6e8:	60 93 42 08 	sts	0x0842, r22	; 0x800842 <__TEXT_REGION_LENGTH__+0x7f4842>
+		case USART_DEBUG:
+			while(!(USART0.STATUS & USART_DREIF_bm));
+ 6ec:	80 91 04 08 	lds	r24, 0x0804	; 0x800804 <__TEXT_REGION_LENGTH__+0x7f4804>
+ 6f0:	85 ff       	sbrs	r24, 5
+ 6f2:	fc cf       	rjmp	.-8      	; 0x6ec <USART_Driver_Putc+0x16>
+			USART0.TXDATAL = src;
+ 6f4:	60 93 02 08 	sts	0x0802, r22	; 0x800802 <__TEXT_REGION_LENGTH__+0x7f4802>
+ 6f8:	08 95       	ret
+
+000006fa <printf_wrapper>:
+	
+	return;
+}
+
+/*printf用ラッパ*/
+int printf_wrapper(char c,FILE *stream){
+ 6fa:	cf 93       	push	r28
+ 6fc:	c8 2f       	mov	r28, r24
+	if(c == '\n')printf_wrapper('\r',stream);
+ 6fe:	8a 30       	cpi	r24, 0x0A	; 10
+ 700:	19 f4       	brne	.+6      	; 0x708 <printf_wrapper+0xe>
+ 702:	8d e0       	ldi	r24, 0x0D	; 13
+ 704:	0e 94 7d 03 	call	0x6fa	; 0x6fa <printf_wrapper>
+	USART_Driver_Putc(USART_DEBUG,c);
+ 708:	6c 2f       	mov	r22, r28
+ 70a:	81 e0       	ldi	r24, 0x01	; 1
+ 70c:	0e 94 6b 03 	call	0x6d6	; 0x6d6 <USART_Driver_Putc>
+	return 0;
+ 710:	80 e0       	ldi	r24, 0x00	; 0
+ 712:	90 e0       	ldi	r25, 0x00	; 0
+ 714:	cf 91       	pop	r28
+ 716:	08 95       	ret
+
+00000718 <__tablejump2__>:
+ 718:	ee 0f       	add	r30, r30
+ 71a:	ff 1f       	adc	r31, r31
+ 71c:	05 90       	lpm	r0, Z+
+ 71e:	f4 91       	lpm	r31, Z
+ 720:	e0 2d       	mov	r30, r0
+ 722:	09 94       	ijmp
+
+00000724 <_exit>:
+ 724:	f8 94       	cli
+
+00000726 <__stop_program>:
+ 726:	ff cf       	rjmp	.-2      	; 0x726 <__stop_program>
