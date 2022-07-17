@@ -1,0 +1,963 @@
+
+Anzu.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000e  00802800  000007ce  00000862  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000007ce  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000022e  0080280e  0080280e  00000870  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000870  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000008a0  2**2
+                  CONTENTS, READONLY
+  5 .debug_info   0000248a  00000000  00000000  000008e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00002296  00000000  00000000  00002d6a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000187  00000000  00000000  00005000  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000f85  00000000  00000000  00005187  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 57 00 	jmp	0xae	; 0xae <__ctors_end>
+   4:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+   8:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+   c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  10:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  14:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  18:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  1c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  20:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  24:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  28:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  2c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  30:	0c 94 52 02 	jmp	0x4a4	; 0x4a4 <__vector_12>
+  34:	0c 94 76 00 	jmp	0xec	; 0xec <__vector_13>
+  38:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  3c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  40:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  44:	0c 94 27 03 	jmp	0x64e	; 0x64e <__vector_17>
+  48:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  4c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  50:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  54:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  58:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  5c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  60:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  64:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  68:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  6c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  70:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  74:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  78:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  7c:	0c 94 5c 03 	jmp	0x6b8	; 0x6b8 <__vector_31>
+  80:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  84:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  88:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  8c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  90:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  94:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  98:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  9c:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__bad_interrupt>
+  a0:	ab 01       	movw	r20, r22
+  a2:	c1 01       	movw	r24, r2
+  a4:	e6 01       	movw	r28, r12
+  a6:	08 02       	muls	r16, r24
+  a8:	2d 02       	muls	r18, r29
+  aa:	70 01       	movw	r14, r0
+  ac:	95 01       	movw	r18, r10
+
+000000ae <__ctors_end>:
+  ae:	11 24       	eor	r1, r1
+  b0:	1f be       	out	0x3f, r1	; 63
+  b2:	cf ef       	ldi	r28, 0xFF	; 255
+  b4:	cd bf       	out	0x3d, r28	; 61
+  b6:	df e3       	ldi	r29, 0x3F	; 63
+  b8:	de bf       	out	0x3e, r29	; 62
+
+000000ba <__do_copy_data>:
+  ba:	18 e2       	ldi	r17, 0x28	; 40
+  bc:	a0 e0       	ldi	r26, 0x00	; 0
+  be:	b8 e2       	ldi	r27, 0x28	; 40
+  c0:	ee ec       	ldi	r30, 0xCE	; 206
+  c2:	f7 e0       	ldi	r31, 0x07	; 7
+  c4:	02 c0       	rjmp	.+4      	; 0xca <__do_copy_data+0x10>
+  c6:	05 90       	lpm	r0, Z+
+  c8:	0d 92       	st	X+, r0
+  ca:	ae 30       	cpi	r26, 0x0E	; 14
+  cc:	b1 07       	cpc	r27, r17
+  ce:	d9 f7       	brne	.-10     	; 0xc6 <__do_copy_data+0xc>
+
+000000d0 <__do_clear_bss>:
+  d0:	2a e2       	ldi	r18, 0x2A	; 42
+  d2:	ae e0       	ldi	r26, 0x0E	; 14
+  d4:	b8 e2       	ldi	r27, 0x28	; 40
+  d6:	01 c0       	rjmp	.+2      	; 0xda <.do_clear_bss_start>
+
+000000d8 <.do_clear_bss_loop>:
+  d8:	1d 92       	st	X+, r1
+
+000000da <.do_clear_bss_start>:
+  da:	ac 33       	cpi	r26, 0x3C	; 60
+  dc:	b2 07       	cpc	r27, r18
+  de:	e1 f7       	brne	.-8      	; 0xd8 <.do_clear_bss_loop>
+  e0:	0e 94 da 02 	call	0x5b4	; 0x5b4 <main>
+  e4:	0c 94 e5 03 	jmp	0x7ca	; 0x7ca <_exit>
+
+000000e8 <__bad_interrupt>:
+  e8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000ec <__vector_13>:
+  ec:	1f 92       	push	r1
+  ee:	0f 92       	push	r0
+  f0:	0f b6       	in	r0, 0x3f	; 63
+  f2:	0f 92       	push	r0
+  f4:	11 24       	eor	r1, r1
+  f6:	cf 92       	push	r12
+  f8:	df 92       	push	r13
+  fa:	ef 92       	push	r14
+  fc:	ff 92       	push	r15
+  fe:	0f 93       	push	r16
+ 100:	1f 93       	push	r17
+ 102:	2f 93       	push	r18
+ 104:	3f 93       	push	r19
+ 106:	4f 93       	push	r20
+ 108:	5f 93       	push	r21
+ 10a:	6f 93       	push	r22
+ 10c:	7f 93       	push	r23
+ 10e:	8f 93       	push	r24
+ 110:	9f 93       	push	r25
+ 112:	af 93       	push	r26
+ 114:	bf 93       	push	r27
+ 116:	cf 93       	push	r28
+ 118:	df 93       	push	r29
+ 11a:	ef 93       	push	r30
+ 11c:	ff 93       	push	r31
+ 11e:	dd 24       	eor	r13, r13
+ 120:	d3 94       	inc	r13
+ 122:	10 e0       	ldi	r17, 0x00	; 0
+ 124:	ee 24       	eor	r14, r14
+ 126:	e3 94       	inc	r14
+ 128:	f1 2c       	mov	r15, r1
+ 12a:	19 c0       	rjmp	.+50     	; 0x15e <__EEPROM_REGION_LENGTH__+0x5e>
+ 12c:	02 17       	cp	r16, r18
+ 12e:	49 f0       	breq	.+18     	; 0x142 <__EEPROM_REGION_LENGTH__+0x42>
+ 130:	e0 91 0e 28 	lds	r30, 0x280E	; 0x80280e <__data_end>
+ 134:	f0 91 0f 28 	lds	r31, 0x280F	; 0x80280f <__data_end+0x1>
+ 138:	30 97       	sbiw	r30, 0x00	; 0
+ 13a:	19 f0       	breq	.+6      	; 0x142 <__EEPROM_REGION_LENGTH__+0x42>
+ 13c:	81 2f       	mov	r24, r17
+ 13e:	09 95       	icall
+ 140:	88 81       	ld	r24, Y
+ 142:	97 01       	movw	r18, r14
+ 144:	01 c0       	rjmp	.+2      	; 0x148 <__EEPROM_REGION_LENGTH__+0x48>
+ 146:	22 0f       	add	r18, r18
+ 148:	ca 94       	dec	r12
+ 14a:	ea f7       	brpl	.-6      	; 0x146 <__EEPROM_REGION_LENGTH__+0x46>
+ 14c:	00 23       	and	r16, r16
+ 14e:	b1 f1       	breq	.+108    	; 0x1bc <__EEPROM_REGION_LENGTH__+0xbc>
+ 150:	82 2b       	or	r24, r18
+ 152:	88 83       	st	Y, r24
+ 154:	1f 5f       	subi	r17, 0xFF	; 255
+ 156:	d3 94       	inc	r13
+ 158:	d3 94       	inc	r13
+ 15a:	18 31       	cpi	r17, 0x18	; 24
+ 15c:	b9 f1       	breq	.+110    	; 0x1cc <__EEPROM_REGION_LENGTH__+0xcc>
+ 15e:	81 2f       	mov	r24, r17
+ 160:	88 0f       	add	r24, r24
+ 162:	0e 94 31 01 	call	0x262	; 0x262 <IR_Sensor_Driver_Get_Value>
+ 166:	08 2f       	mov	r16, r24
+ 168:	8d 2d       	mov	r24, r13
+ 16a:	0e 94 31 01 	call	0x262	; 0x262 <IR_Sensor_Driver_Get_Value>
+ 16e:	08 23       	and	r16, r24
+ 170:	c1 2f       	mov	r28, r17
+ 172:	c6 95       	lsr	r28
+ 174:	c6 95       	lsr	r28
+ 176:	c6 95       	lsr	r28
+ 178:	d0 e0       	ldi	r29, 0x00	; 0
+ 17a:	ce 5e       	subi	r28, 0xEE	; 238
+ 17c:	d7 4d       	sbci	r29, 0xD7	; 215
+ 17e:	88 81       	ld	r24, Y
+ 180:	91 2f       	mov	r25, r17
+ 182:	97 70       	andi	r25, 0x07	; 7
+ 184:	c9 2e       	mov	r12, r25
+ 186:	28 2f       	mov	r18, r24
+ 188:	30 e0       	ldi	r19, 0x00	; 0
+ 18a:	02 c0       	rjmp	.+4      	; 0x190 <__EEPROM_REGION_LENGTH__+0x90>
+ 18c:	35 95       	asr	r19
+ 18e:	27 95       	ror	r18
+ 190:	9a 95       	dec	r25
+ 192:	e2 f7       	brpl	.-8      	; 0x18c <__EEPROM_REGION_LENGTH__+0x8c>
+ 194:	21 70       	andi	r18, 0x01	; 1
+ 196:	33 27       	eor	r19, r19
+ 198:	21 15       	cp	r18, r1
+ 19a:	31 05       	cpc	r19, r1
+ 19c:	39 f6       	brne	.-114    	; 0x12c <__EEPROM_REGION_LENGTH__+0x2c>
+ 19e:	02 17       	cp	r16, r18
+ 1a0:	81 f2       	breq	.-96     	; 0x142 <__EEPROM_REGION_LENGTH__+0x42>
+ 1a2:	e0 91 10 28 	lds	r30, 0x2810	; 0x802810 <IR_Keyboard_Controller_Callback_Note_On>
+ 1a6:	f0 91 11 28 	lds	r31, 0x2811	; 0x802811 <IR_Keyboard_Controller_Callback_Note_On+0x1>
+ 1aa:	30 97       	sbiw	r30, 0x00	; 0
+ 1ac:	39 f6       	brne	.-114    	; 0x13c <__EEPROM_REGION_LENGTH__+0x3c>
+ 1ae:	97 01       	movw	r18, r14
+ 1b0:	01 c0       	rjmp	.+2      	; 0x1b4 <__EEPROM_REGION_LENGTH__+0xb4>
+ 1b2:	22 0f       	add	r18, r18
+ 1b4:	ca 94       	dec	r12
+ 1b6:	ea f7       	brpl	.-6      	; 0x1b2 <__EEPROM_REGION_LENGTH__+0xb2>
+ 1b8:	01 11       	cpse	r16, r1
+ 1ba:	ca cf       	rjmp	.-108    	; 0x150 <__EEPROM_REGION_LENGTH__+0x50>
+ 1bc:	20 95       	com	r18
+ 1be:	82 23       	and	r24, r18
+ 1c0:	88 83       	st	Y, r24
+ 1c2:	1f 5f       	subi	r17, 0xFF	; 255
+ 1c4:	d3 94       	inc	r13
+ 1c6:	d3 94       	inc	r13
+ 1c8:	18 31       	cpi	r17, 0x18	; 24
+ 1ca:	49 f6       	brne	.-110    	; 0x15e <__EEPROM_REGION_LENGTH__+0x5e>
+ 1cc:	81 e0       	ldi	r24, 0x01	; 1
+ 1ce:	80 93 96 0a 	sts	0x0A96, r24	; 0x800a96 <__TEXT_REGION_LENGTH__+0x7f4a96>
+ 1d2:	ff 91       	pop	r31
+ 1d4:	ef 91       	pop	r30
+ 1d6:	df 91       	pop	r29
+ 1d8:	cf 91       	pop	r28
+ 1da:	bf 91       	pop	r27
+ 1dc:	af 91       	pop	r26
+ 1de:	9f 91       	pop	r25
+ 1e0:	8f 91       	pop	r24
+ 1e2:	7f 91       	pop	r23
+ 1e4:	6f 91       	pop	r22
+ 1e6:	5f 91       	pop	r21
+ 1e8:	4f 91       	pop	r20
+ 1ea:	3f 91       	pop	r19
+ 1ec:	2f 91       	pop	r18
+ 1ee:	1f 91       	pop	r17
+ 1f0:	0f 91       	pop	r16
+ 1f2:	ff 90       	pop	r15
+ 1f4:	ef 90       	pop	r14
+ 1f6:	df 90       	pop	r13
+ 1f8:	cf 90       	pop	r12
+ 1fa:	0f 90       	pop	r0
+ 1fc:	0f be       	out	0x3f, r0	; 63
+ 1fe:	0f 90       	pop	r0
+ 200:	1f 90       	pop	r1
+ 202:	18 95       	reti
+
+00000204 <IR_Keyboard_Controller_Init>:
+ 204:	0e 94 14 01 	call	0x228	; 0x228 <IR_Sensor_Driver_Init>
+ 208:	e0 e9       	ldi	r30, 0x90	; 144
+ 20a:	fa e0       	ldi	r31, 0x0A	; 10
+ 20c:	80 e3       	ldi	r24, 0x30	; 48
+ 20e:	95 e7       	ldi	r25, 0x75	; 117
+ 210:	84 87       	std	Z+12, r24	; 0x0c
+ 212:	95 87       	std	Z+13, r25	; 0x0d
+ 214:	80 81       	ld	r24, Z
+ 216:	83 60       	ori	r24, 0x03	; 3
+ 218:	80 83       	st	Z, r24
+ 21a:	08 95       	ret
+
+0000021c <IR_Keyboard_Controller_Begin>:
+ 21c:	0e 94 2b 01 	call	0x256	; 0x256 <IR_Sensor_Driver_Begin>
+ 220:	81 e0       	ldi	r24, 0x01	; 1
+ 222:	80 93 95 0a 	sts	0x0A95, r24	; 0x800a95 <__TEXT_REGION_LENGTH__+0x7f4a95>
+ 226:	08 95       	ret
+
+00000228 <IR_Sensor_Driver_Init>:
+ 228:	e0 e4       	ldi	r30, 0x40	; 64
+ 22a:	f4 e0       	ldi	r31, 0x04	; 4
+ 22c:	9f e3       	ldi	r25, 0x3F	; 63
+ 22e:	91 83       	std	Z+1, r25	; 0x01
+ 230:	82 e0       	ldi	r24, 0x02	; 2
+ 232:	80 93 62 04 	sts	0x0462, r24	; 0x800462 <__TEXT_REGION_LENGTH__+0x7f4462>
+ 236:	a0 e8       	ldi	r26, 0x80	; 128
+ 238:	b4 e0       	ldi	r27, 0x04	; 4
+ 23a:	88 e0       	ldi	r24, 0x08	; 8
+ 23c:	11 96       	adiw	r26, 0x01	; 1
+ 23e:	8c 93       	st	X, r24
+ 240:	11 97       	sbiw	r26, 0x01	; 1
+ 242:	96 83       	std	Z+6, r25	; 0x06
+ 244:	15 82       	std	Z+5, r1	; 0x05
+ 246:	16 96       	adiw	r26, 0x06	; 6
+ 248:	8c 93       	st	X, r24
+ 24a:	e0 e8       	ldi	r30, 0x80	; 128
+ 24c:	f6 e0       	ldi	r31, 0x06	; 6
+ 24e:	82 81       	ldd	r24, Z+2	; 0x02
+ 250:	8b 69       	ori	r24, 0x9B	; 155
+ 252:	82 83       	std	Z+2, r24	; 0x02
+ 254:	08 95       	ret
+
+00000256 <IR_Sensor_Driver_Begin>:
+ 256:	e0 e8       	ldi	r30, 0x80	; 128
+ 258:	f6 e0       	ldi	r31, 0x06	; 6
+ 25a:	80 81       	ld	r24, Z
+ 25c:	81 60       	ori	r24, 0x01	; 1
+ 25e:	80 83       	st	Z, r24
+ 260:	08 95       	ret
+
+00000262 <IR_Sensor_Driver_Get_Value>:
+ 262:	8f 73       	andi	r24, 0x3F	; 63
+ 264:	80 93 44 04 	sts	0x0444, r24	; 0x800444 <__TEXT_REGION_LENGTH__+0x7f4444>
+ 268:	88 e0       	ldi	r24, 0x08	; 8
+ 26a:	80 93 85 04 	sts	0x0485, r24	; 0x800485 <__TEXT_REGION_LENGTH__+0x7f4485>
+ 26e:	80 91 87 06 	lds	r24, 0x0687	; 0x800687 <__TEXT_REGION_LENGTH__+0x7f4687>
+ 272:	82 95       	swap	r24
+ 274:	81 70       	andi	r24, 0x01	; 1
+ 276:	08 95       	ret
+
+00000278 <RGB_LED_Driver_SetColour_FromEnum>:
+ 278:	46 2f       	mov	r20, r22
+ 27a:	50 e0       	ldi	r21, 0x00	; 0
+ 27c:	47 30       	cpi	r20, 0x07	; 7
+ 27e:	51 05       	cpc	r21, r1
+ 280:	30 f1       	brcs	.+76     	; 0x2ce <RGB_LED_Driver_SetColour_FromEnum+0x56>
+ 282:	98 2f       	mov	r25, r24
+ 284:	96 95       	lsr	r25
+ 286:	96 95       	lsr	r25
+ 288:	96 95       	lsr	r25
+ 28a:	49 2f       	mov	r20, r25
+ 28c:	50 e0       	ldi	r21, 0x00	; 0
+ 28e:	29 2f       	mov	r18, r25
+ 290:	22 0f       	add	r18, r18
+ 292:	22 0f       	add	r18, r18
+ 294:	22 0f       	add	r18, r18
+ 296:	28 1b       	sub	r18, r24
+ 298:	29 5f       	subi	r18, 0xF9	; 249
+ 29a:	81 e0       	ldi	r24, 0x01	; 1
+ 29c:	90 e0       	ldi	r25, 0x00	; 0
+ 29e:	01 c0       	rjmp	.+2      	; 0x2a2 <RGB_LED_Driver_SetColour_FromEnum+0x2a>
+ 2a0:	88 0f       	add	r24, r24
+ 2a2:	2a 95       	dec	r18
+ 2a4:	ea f7       	brpl	.-6      	; 0x2a0 <RGB_LED_Driver_SetColour_FromEnum+0x28>
+ 2a6:	80 95       	com	r24
+ 2a8:	fa 01       	movw	r30, r20
+ 2aa:	ea 5d       	subi	r30, 0xDA	; 218
+ 2ac:	f7 4d       	sbci	r31, 0xD7	; 215
+ 2ae:	90 81       	ld	r25, Z
+ 2b0:	98 23       	and	r25, r24
+ 2b2:	90 83       	st	Z, r25
+ 2b4:	fa 01       	movw	r30, r20
+ 2b6:	e2 5e       	subi	r30, 0xE2	; 226
+ 2b8:	f7 4d       	sbci	r31, 0xD7	; 215
+ 2ba:	90 81       	ld	r25, Z
+ 2bc:	98 23       	and	r25, r24
+ 2be:	90 83       	st	Z, r25
+ 2c0:	fa 01       	movw	r30, r20
+ 2c2:	ea 5e       	subi	r30, 0xEA	; 234
+ 2c4:	f7 4d       	sbci	r31, 0xD7	; 215
+ 2c6:	90 81       	ld	r25, Z
+ 2c8:	89 23       	and	r24, r25
+ 2ca:	80 83       	st	Z, r24
+ 2cc:	08 95       	ret
+ 2ce:	fa 01       	movw	r30, r20
+ 2d0:	e0 5b       	subi	r30, 0xB0	; 176
+ 2d2:	ff 4f       	sbci	r31, 0xFF	; 255
+ 2d4:	98 2f       	mov	r25, r24
+ 2d6:	96 95       	lsr	r25
+ 2d8:	96 95       	lsr	r25
+ 2da:	96 95       	lsr	r25
+ 2dc:	0c 94 df 03 	jmp	0x7be	; 0x7be <__tablejump2__>
+ 2e0:	49 2f       	mov	r20, r25
+ 2e2:	50 e0       	ldi	r21, 0x00	; 0
+ 2e4:	99 0f       	add	r25, r25
+ 2e6:	99 0f       	add	r25, r25
+ 2e8:	99 0f       	add	r25, r25
+ 2ea:	98 1b       	sub	r25, r24
+ 2ec:	99 5f       	subi	r25, 0xF9	; 249
+ 2ee:	21 e0       	ldi	r18, 0x01	; 1
+ 2f0:	30 e0       	ldi	r19, 0x00	; 0
+ 2f2:	b9 01       	movw	r22, r18
+ 2f4:	02 c0       	rjmp	.+4      	; 0x2fa <RGB_LED_Driver_SetColour_FromEnum+0x82>
+ 2f6:	66 0f       	add	r22, r22
+ 2f8:	77 1f       	adc	r23, r23
+ 2fa:	9a 95       	dec	r25
+ 2fc:	e2 f7       	brpl	.-8      	; 0x2f6 <RGB_LED_Driver_SetColour_FromEnum+0x7e>
+ 2fe:	cb 01       	movw	r24, r22
+ 300:	fa 01       	movw	r30, r20
+ 302:	ea 5d       	subi	r30, 0xDA	; 218
+ 304:	f7 4d       	sbci	r31, 0xD7	; 215
+ 306:	96 2f       	mov	r25, r22
+ 308:	90 95       	com	r25
+ 30a:	20 81       	ld	r18, Z
+ 30c:	92 23       	and	r25, r18
+ 30e:	90 83       	st	Z, r25
+ 310:	fa 01       	movw	r30, r20
+ 312:	e2 5e       	subi	r30, 0xE2	; 226
+ 314:	f7 4d       	sbci	r31, 0xD7	; 215
+ 316:	90 81       	ld	r25, Z
+ 318:	98 2b       	or	r25, r24
+ 31a:	90 83       	st	Z, r25
+ 31c:	fa 01       	movw	r30, r20
+ 31e:	ea 5e       	subi	r30, 0xEA	; 234
+ 320:	f7 4d       	sbci	r31, 0xD7	; 215
+ 322:	90 81       	ld	r25, Z
+ 324:	89 2b       	or	r24, r25
+ 326:	80 83       	st	Z, r24
+ 328:	08 95       	ret
+ 32a:	49 2f       	mov	r20, r25
+ 32c:	50 e0       	ldi	r21, 0x00	; 0
+ 32e:	99 0f       	add	r25, r25
+ 330:	99 0f       	add	r25, r25
+ 332:	99 0f       	add	r25, r25
+ 334:	98 1b       	sub	r25, r24
+ 336:	99 5f       	subi	r25, 0xF9	; 249
+ 338:	21 e0       	ldi	r18, 0x01	; 1
+ 33a:	30 e0       	ldi	r19, 0x00	; 0
+ 33c:	b9 01       	movw	r22, r18
+ 33e:	02 c0       	rjmp	.+4      	; 0x344 <RGB_LED_Driver_SetColour_FromEnum+0xcc>
+ 340:	66 0f       	add	r22, r22
+ 342:	77 1f       	adc	r23, r23
+ 344:	9a 95       	dec	r25
+ 346:	e2 f7       	brpl	.-8      	; 0x340 <RGB_LED_Driver_SetColour_FromEnum+0xc8>
+ 348:	cb 01       	movw	r24, r22
+ 34a:	fa 01       	movw	r30, r20
+ 34c:	ea 5d       	subi	r30, 0xDA	; 218
+ 34e:	f7 4d       	sbci	r31, 0xD7	; 215
+ 350:	90 81       	ld	r25, Z
+ 352:	98 2b       	or	r25, r24
+ 354:	dc cf       	rjmp	.-72     	; 0x30e <RGB_LED_Driver_SetColour_FromEnum+0x96>
+ 356:	49 2f       	mov	r20, r25
+ 358:	50 e0       	ldi	r21, 0x00	; 0
+ 35a:	29 2f       	mov	r18, r25
+ 35c:	22 0f       	add	r18, r18
+ 35e:	22 0f       	add	r18, r18
+ 360:	22 0f       	add	r18, r18
+ 362:	28 1b       	sub	r18, r24
+ 364:	29 5f       	subi	r18, 0xF9	; 249
+ 366:	81 e0       	ldi	r24, 0x01	; 1
+ 368:	90 e0       	ldi	r25, 0x00	; 0
+ 36a:	01 c0       	rjmp	.+2      	; 0x36e <RGB_LED_Driver_SetColour_FromEnum+0xf6>
+ 36c:	88 0f       	add	r24, r24
+ 36e:	2a 95       	dec	r18
+ 370:	ea f7       	brpl	.-6      	; 0x36c <RGB_LED_Driver_SetColour_FromEnum+0xf4>
+ 372:	fa 01       	movw	r30, r20
+ 374:	ea 5d       	subi	r30, 0xDA	; 218
+ 376:	f7 4d       	sbci	r31, 0xD7	; 215
+ 378:	90 81       	ld	r25, Z
+ 37a:	98 2b       	or	r25, r24
+ 37c:	90 83       	st	Z, r25
+ 37e:	80 95       	com	r24
+ 380:	99 cf       	rjmp	.-206    	; 0x2b4 <RGB_LED_Driver_SetColour_FromEnum+0x3c>
+ 382:	29 2f       	mov	r18, r25
+ 384:	30 e0       	ldi	r19, 0x00	; 0
+ 386:	99 0f       	add	r25, r25
+ 388:	99 0f       	add	r25, r25
+ 38a:	99 0f       	add	r25, r25
+ 38c:	98 1b       	sub	r25, r24
+ 38e:	99 5f       	subi	r25, 0xF9	; 249
+ 390:	41 e0       	ldi	r20, 0x01	; 1
+ 392:	50 e0       	ldi	r21, 0x00	; 0
+ 394:	ba 01       	movw	r22, r20
+ 396:	02 c0       	rjmp	.+4      	; 0x39c <RGB_LED_Driver_SetColour_FromEnum+0x124>
+ 398:	66 0f       	add	r22, r22
+ 39a:	77 1f       	adc	r23, r23
+ 39c:	9a 95       	dec	r25
+ 39e:	e2 f7       	brpl	.-8      	; 0x398 <RGB_LED_Driver_SetColour_FromEnum+0x120>
+ 3a0:	cb 01       	movw	r24, r22
+ 3a2:	96 2f       	mov	r25, r22
+ 3a4:	90 95       	com	r25
+ 3a6:	f9 01       	movw	r30, r18
+ 3a8:	ea 5d       	subi	r30, 0xDA	; 218
+ 3aa:	f7 4d       	sbci	r31, 0xD7	; 215
+ 3ac:	40 81       	ld	r20, Z
+ 3ae:	49 23       	and	r20, r25
+ 3b0:	40 83       	st	Z, r20
+ 3b2:	f9 01       	movw	r30, r18
+ 3b4:	e2 5e       	subi	r30, 0xE2	; 226
+ 3b6:	f7 4d       	sbci	r31, 0xD7	; 215
+ 3b8:	40 81       	ld	r20, Z
+ 3ba:	94 23       	and	r25, r20
+ 3bc:	90 83       	st	Z, r25
+ 3be:	f9 01       	movw	r30, r18
+ 3c0:	ea 5e       	subi	r30, 0xEA	; 234
+ 3c2:	f7 4d       	sbci	r31, 0xD7	; 215
+ 3c4:	90 81       	ld	r25, Z
+ 3c6:	89 2b       	or	r24, r25
+ 3c8:	80 83       	st	Z, r24
+ 3ca:	08 95       	ret
+ 3cc:	49 2f       	mov	r20, r25
+ 3ce:	50 e0       	ldi	r21, 0x00	; 0
+ 3d0:	29 2f       	mov	r18, r25
+ 3d2:	22 0f       	add	r18, r18
+ 3d4:	22 0f       	add	r18, r18
+ 3d6:	22 0f       	add	r18, r18
+ 3d8:	28 1b       	sub	r18, r24
+ 3da:	29 5f       	subi	r18, 0xF9	; 249
+ 3dc:	81 e0       	ldi	r24, 0x01	; 1
+ 3de:	90 e0       	ldi	r25, 0x00	; 0
+ 3e0:	01 c0       	rjmp	.+2      	; 0x3e4 <RGB_LED_Driver_SetColour_FromEnum+0x16c>
+ 3e2:	88 0f       	add	r24, r24
+ 3e4:	2a 95       	dec	r18
+ 3e6:	ea f7       	brpl	.-6      	; 0x3e2 <RGB_LED_Driver_SetColour_FromEnum+0x16a>
+ 3e8:	fa 01       	movw	r30, r20
+ 3ea:	ea 5d       	subi	r30, 0xDA	; 218
+ 3ec:	f7 4d       	sbci	r31, 0xD7	; 215
+ 3ee:	90 81       	ld	r25, Z
+ 3f0:	98 2b       	or	r25, r24
+ 3f2:	90 83       	st	Z, r25
+ 3f4:	fa 01       	movw	r30, r20
+ 3f6:	e2 5e       	subi	r30, 0xE2	; 226
+ 3f8:	f7 4d       	sbci	r31, 0xD7	; 215
+ 3fa:	90 81       	ld	r25, Z
+ 3fc:	98 2b       	or	r25, r24
+ 3fe:	90 83       	st	Z, r25
+ 400:	fa 01       	movw	r30, r20
+ 402:	ea 5e       	subi	r30, 0xEA	; 234
+ 404:	f7 4d       	sbci	r31, 0xD7	; 215
+ 406:	80 95       	com	r24
+ 408:	90 81       	ld	r25, Z
+ 40a:	89 23       	and	r24, r25
+ 40c:	80 83       	st	Z, r24
+ 40e:	08 95       	ret
+ 410:	29 2f       	mov	r18, r25
+ 412:	30 e0       	ldi	r19, 0x00	; 0
+ 414:	99 0f       	add	r25, r25
+ 416:	99 0f       	add	r25, r25
+ 418:	99 0f       	add	r25, r25
+ 41a:	98 1b       	sub	r25, r24
+ 41c:	99 5f       	subi	r25, 0xF9	; 249
+ 41e:	41 e0       	ldi	r20, 0x01	; 1
+ 420:	50 e0       	ldi	r21, 0x00	; 0
+ 422:	ba 01       	movw	r22, r20
+ 424:	02 c0       	rjmp	.+4      	; 0x42a <__LOCK_REGION_LENGTH__+0x2a>
+ 426:	66 0f       	add	r22, r22
+ 428:	77 1f       	adc	r23, r23
+ 42a:	9a 95       	dec	r25
+ 42c:	e2 f7       	brpl	.-8      	; 0x426 <__LOCK_REGION_LENGTH__+0x26>
+ 42e:	cb 01       	movw	r24, r22
+ 430:	96 2f       	mov	r25, r22
+ 432:	90 95       	com	r25
+ 434:	f9 01       	movw	r30, r18
+ 436:	ea 5d       	subi	r30, 0xDA	; 218
+ 438:	f7 4d       	sbci	r31, 0xD7	; 215
+ 43a:	40 81       	ld	r20, Z
+ 43c:	49 23       	and	r20, r25
+ 43e:	40 83       	st	Z, r20
+ 440:	f9 01       	movw	r30, r18
+ 442:	e2 5e       	subi	r30, 0xE2	; 226
+ 444:	f7 4d       	sbci	r31, 0xD7	; 215
+ 446:	40 81       	ld	r20, Z
+ 448:	84 2b       	or	r24, r20
+ 44a:	80 83       	st	Z, r24
+ 44c:	f9 01       	movw	r30, r18
+ 44e:	ea 5e       	subi	r30, 0xEA	; 234
+ 450:	f7 4d       	sbci	r31, 0xD7	; 215
+ 452:	80 81       	ld	r24, Z
+ 454:	98 23       	and	r25, r24
+ 456:	90 83       	st	Z, r25
+ 458:	08 95       	ret
+ 45a:	49 2f       	mov	r20, r25
+ 45c:	50 e0       	ldi	r21, 0x00	; 0
+ 45e:	99 0f       	add	r25, r25
+ 460:	99 0f       	add	r25, r25
+ 462:	99 0f       	add	r25, r25
+ 464:	98 1b       	sub	r25, r24
+ 466:	99 5f       	subi	r25, 0xF9	; 249
+ 468:	21 e0       	ldi	r18, 0x01	; 1
+ 46a:	30 e0       	ldi	r19, 0x00	; 0
+ 46c:	b9 01       	movw	r22, r18
+ 46e:	02 c0       	rjmp	.+4      	; 0x474 <__LOCK_REGION_LENGTH__+0x74>
+ 470:	66 0f       	add	r22, r22
+ 472:	77 1f       	adc	r23, r23
+ 474:	9a 95       	dec	r25
+ 476:	e2 f7       	brpl	.-8      	; 0x470 <__LOCK_REGION_LENGTH__+0x70>
+ 478:	cb 01       	movw	r24, r22
+ 47a:	fa 01       	movw	r30, r20
+ 47c:	ea 5d       	subi	r30, 0xDA	; 218
+ 47e:	f7 4d       	sbci	r31, 0xD7	; 215
+ 480:	90 81       	ld	r25, Z
+ 482:	98 2b       	or	r25, r24
+ 484:	90 83       	st	Z, r25
+ 486:	fa 01       	movw	r30, r20
+ 488:	e2 5e       	subi	r30, 0xE2	; 226
+ 48a:	f7 4d       	sbci	r31, 0xD7	; 215
+ 48c:	98 2f       	mov	r25, r24
+ 48e:	90 95       	com	r25
+ 490:	20 81       	ld	r18, Z
+ 492:	92 23       	and	r25, r18
+ 494:	90 83       	st	Z, r25
+ 496:	fa 01       	movw	r30, r20
+ 498:	ea 5e       	subi	r30, 0xEA	; 234
+ 49a:	f7 4d       	sbci	r31, 0xD7	; 215
+ 49c:	90 81       	ld	r25, Z
+ 49e:	89 2b       	or	r24, r25
+ 4a0:	80 83       	st	Z, r24
+ 4a2:	08 95       	ret
+
+000004a4 <__vector_12>:
+ 4a4:	1f 92       	push	r1
+ 4a6:	0f 92       	push	r0
+ 4a8:	0f b6       	in	r0, 0x3f	; 63
+ 4aa:	0f 92       	push	r0
+ 4ac:	11 24       	eor	r1, r1
+ 4ae:	2f 93       	push	r18
+ 4b0:	3f 93       	push	r19
+ 4b2:	8f 93       	push	r24
+ 4b4:	9f 93       	push	r25
+ 4b6:	ef 93       	push	r30
+ 4b8:	ff 93       	push	r31
+ 4ba:	f8 94       	cli
+ 4bc:	90 91 15 28 	lds	r25, 0x2815	; 0x802815 <ledCntr>
+ 4c0:	99 23       	and	r25, r25
+ 4c2:	09 f4       	brne	.+2      	; 0x4c6 <__vector_12+0x22>
+ 4c4:	45 c0       	rjmp	.+138    	; 0x550 <__vector_12+0xac>
+ 4c6:	91 30       	cpi	r25, 0x01	; 1
+ 4c8:	09 f4       	brne	.+2      	; 0x4cc <__vector_12+0x28>
+ 4ca:	3f c0       	rjmp	.+126    	; 0x54a <__vector_12+0xa6>
+ 4cc:	e6 e1       	ldi	r30, 0x16	; 22
+ 4ce:	f8 e2       	ldi	r31, 0x28	; 40
+ 4d0:	9f 01       	movw	r18, r30
+ 4d2:	28 5f       	subi	r18, 0xF8	; 248
+ 4d4:	3f 4f       	sbci	r19, 0xFF	; 255
+ 4d6:	80 91 c3 08 	lds	r24, 0x08C3	; 0x8008c3 <__TEXT_REGION_LENGTH__+0x7f48c3>
+ 4da:	85 ff       	sbrs	r24, 5
+ 4dc:	fc cf       	rjmp	.-8      	; 0x4d6 <__vector_12+0x32>
+ 4de:	81 91       	ld	r24, Z+
+ 4e0:	80 93 c4 08 	sts	0x08C4, r24	; 0x8008c4 <__TEXT_REGION_LENGTH__+0x7f48c4>
+ 4e4:	2e 17       	cp	r18, r30
+ 4e6:	3f 07       	cpc	r19, r31
+ 4e8:	b1 f7       	brne	.-20     	; 0x4d6 <__vector_12+0x32>
+ 4ea:	87 e0       	ldi	r24, 0x07	; 7
+ 4ec:	80 93 86 04 	sts	0x0486, r24	; 0x800486 <__TEXT_REGION_LENGTH__+0x7f4486>
+ 4f0:	80 e2       	ldi	r24, 0x20	; 32
+ 4f2:	00 00       	nop
+ 4f4:	81 50       	subi	r24, 0x01	; 1
+ 4f6:	e9 f7       	brne	.-6      	; 0x4f2 <__vector_12+0x4e>
+ 4f8:	80 e8       	ldi	r24, 0x80	; 128
+ 4fa:	80 93 06 04 	sts	0x0406, r24	; 0x800406 <__TEXT_REGION_LENGTH__+0x7f4406>
+ 4fe:	80 93 05 04 	sts	0x0405, r24	; 0x800405 <__TEXT_REGION_LENGTH__+0x7f4405>
+ 502:	80 e2       	ldi	r24, 0x20	; 32
+ 504:	00 00       	nop
+ 506:	81 50       	subi	r24, 0x01	; 1
+ 508:	e9 f7       	brne	.-6      	; 0x504 <__vector_12+0x60>
+ 50a:	21 e0       	ldi	r18, 0x01	; 1
+ 50c:	30 e0       	ldi	r19, 0x00	; 0
+ 50e:	09 2e       	mov	r0, r25
+ 510:	01 c0       	rjmp	.+2      	; 0x514 <__vector_12+0x70>
+ 512:	22 0f       	add	r18, r18
+ 514:	0a 94       	dec	r0
+ 516:	ea f7       	brpl	.-6      	; 0x512 <__vector_12+0x6e>
+ 518:	20 93 85 04 	sts	0x0485, r18	; 0x800485 <__TEXT_REGION_LENGTH__+0x7f4485>
+ 51c:	92 30       	cpi	r25, 0x02	; 2
+ 51e:	10 f4       	brcc	.+4      	; 0x524 <__vector_12+0x80>
+ 520:	81 e0       	ldi	r24, 0x01	; 1
+ 522:	89 0f       	add	r24, r25
+ 524:	80 93 15 28 	sts	0x2815, r24	; 0x802815 <ledCntr>
+ 528:	80 91 86 0a 	lds	r24, 0x0A86	; 0x800a86 <__TEXT_REGION_LENGTH__+0x7f4a86>
+ 52c:	81 60       	ori	r24, 0x01	; 1
+ 52e:	80 93 86 0a 	sts	0x0A86, r24	; 0x800a86 <__TEXT_REGION_LENGTH__+0x7f4a86>
+ 532:	78 94       	sei
+ 534:	ff 91       	pop	r31
+ 536:	ef 91       	pop	r30
+ 538:	9f 91       	pop	r25
+ 53a:	8f 91       	pop	r24
+ 53c:	3f 91       	pop	r19
+ 53e:	2f 91       	pop	r18
+ 540:	0f 90       	pop	r0
+ 542:	0f be       	out	0x3f, r0	; 63
+ 544:	0f 90       	pop	r0
+ 546:	1f 90       	pop	r1
+ 548:	18 95       	reti
+ 54a:	ee e1       	ldi	r30, 0x1E	; 30
+ 54c:	f8 e2       	ldi	r31, 0x28	; 40
+ 54e:	c0 cf       	rjmp	.-128    	; 0x4d0 <__vector_12+0x2c>
+ 550:	e6 e2       	ldi	r30, 0x26	; 38
+ 552:	f8 e2       	ldi	r31, 0x28	; 40
+ 554:	bd cf       	rjmp	.-134    	; 0x4d0 <__vector_12+0x2c>
+
+00000556 <RGB_LED_Driver_Init>:
+ 556:	80 ed       	ldi	r24, 0xD0	; 208
+ 558:	80 93 01 04 	sts	0x0401, r24	; 0x800401 <__TEXT_REGION_LENGTH__+0x7f4401>
+ 55c:	e0 e8       	ldi	r30, 0x80	; 128
+ 55e:	f4 e0       	ldi	r31, 0x04	; 4
+ 560:	87 e0       	ldi	r24, 0x07	; 7
+ 562:	81 83       	std	Z+1, r24	; 0x01
+ 564:	86 83       	std	Z+6, r24	; 0x06
+ 566:	e0 ec       	ldi	r30, 0xC0	; 192
+ 568:	f8 e0       	ldi	r31, 0x08	; 8
+ 56a:	80 81       	ld	r24, Z
+ 56c:	80 63       	ori	r24, 0x30	; 48
+ 56e:	80 83       	st	Z, r24
+ 570:	81 81       	ldd	r24, Z+1	; 0x01
+ 572:	80 68       	ori	r24, 0x80	; 128
+ 574:	81 83       	std	Z+1, r24	; 0x01
+ 576:	80 81       	ld	r24, Z
+ 578:	81 60       	ori	r24, 0x01	; 1
+ 57a:	80 83       	st	Z, r24
+ 57c:	85 e0       	ldi	r24, 0x05	; 5
+ 57e:	80 93 00 0a 	sts	0x0A00, r24	; 0x800a00 <__TEXT_REGION_LENGTH__+0x7f4a00>
+ 582:	e0 e8       	ldi	r30, 0x80	; 128
+ 584:	fa e0       	ldi	r31, 0x0A	; 10
+ 586:	80 e2       	ldi	r24, 0x20	; 32
+ 588:	9e e4       	ldi	r25, 0x4E	; 78
+ 58a:	84 87       	std	Z+12, r24	; 0x0c
+ 58c:	95 87       	std	Z+13, r25	; 0x0d
+ 58e:	80 81       	ld	r24, Z
+ 590:	85 60       	ori	r24, 0x05	; 5
+ 592:	80 83       	st	Z, r24
+ 594:	08 95       	ret
+
+00000596 <RGB_LED_Driver_Begin>:
+ 596:	e0 e8       	ldi	r30, 0x80	; 128
+ 598:	fa e0       	ldi	r31, 0x0A	; 10
+ 59a:	85 81       	ldd	r24, Z+5	; 0x05
+ 59c:	81 60       	ori	r24, 0x01	; 1
+ 59e:	85 83       	std	Z+5, r24	; 0x05
+ 5a0:	08 95       	ret
+
+000005a2 <RGB_LED_Driver_Set_Separater>:
+ 5a2:	87 31       	cpi	r24, 0x17	; 23
+ 5a4:	08 f0       	brcs	.+2      	; 0x5a8 <RGB_LED_Driver_Set_Separater+0x6>
+ 5a6:	08 95       	ret
+ 5a8:	88 0f       	add	r24, r24
+ 5aa:	8e 5e       	subi	r24, 0xEE	; 238
+ 5ac:	0c 94 3c 01 	jmp	0x278	; 0x278 <RGB_LED_Driver_SetColour_FromEnum>
+
+000005b0 <testOff>:
+ 5b0:	08 95       	ret
+
+000005b2 <testOn>:
+ 5b2:	08 95       	ret
+
+000005b4 <main>:
+ 5b4:	0e 94 ff 02 	call	0x5fe	; 0x5fe <MCU_Init>
+ 5b8:	0e 94 91 03 	call	0x722	; 0x722 <USART_Driver_Init>
+ 5bc:	0e 94 ab 02 	call	0x556	; 0x556 <RGB_LED_Driver_Init>
+ 5c0:	0e 94 02 01 	call	0x204	; 0x204 <IR_Keyboard_Controller_Init>
+ 5c4:	78 94       	sei
+ 5c6:	89 ed       	ldi	r24, 0xD9	; 217
+ 5c8:	92 e0       	ldi	r25, 0x02	; 2
+ 5ca:	80 93 10 28 	sts	0x2810, r24	; 0x802810 <IR_Keyboard_Controller_Callback_Note_On>
+ 5ce:	90 93 11 28 	sts	0x2811, r25	; 0x802811 <IR_Keyboard_Controller_Callback_Note_On+0x1>
+ 5d2:	88 ed       	ldi	r24, 0xD8	; 216
+ 5d4:	92 e0       	ldi	r25, 0x02	; 2
+ 5d6:	80 93 0e 28 	sts	0x280E, r24	; 0x80280e <__data_end>
+ 5da:	90 93 0f 28 	sts	0x280F, r25	; 0x80280f <__data_end+0x1>
+ 5de:	81 e0       	ldi	r24, 0x01	; 1
+ 5e0:	0e 94 c9 03 	call	0x792	; 0x792 <USART_Driver_Begin>
+ 5e4:	0e 94 cb 02 	call	0x596	; 0x596 <RGB_LED_Driver_Begin>
+ 5e8:	0e 94 0e 01 	call	0x21c	; 0x21c <IR_Keyboard_Controller_Begin>
+ 5ec:	c3 e0       	ldi	r28, 0x03	; 3
+ 5ee:	64 e0       	ldi	r22, 0x04	; 4
+ 5f0:	8c 2f       	mov	r24, r28
+ 5f2:	0e 94 d1 02 	call	0x5a2	; 0x5a2 <RGB_LED_Driver_Set_Separater>
+ 5f6:	cc 5f       	subi	r28, 0xFC	; 252
+ 5f8:	cb 31       	cpi	r28, 0x1B	; 27
+ 5fa:	c9 f7       	brne	.-14     	; 0x5ee <main+0x3a>
+ 5fc:	ff cf       	rjmp	.-2      	; 0x5fc <main+0x48>
+
+000005fe <MCU_Init>:
+ 5fe:	88 ed       	ldi	r24, 0xD8	; 216
+ 600:	84 bf       	out	0x34, r24	; 52
+ 602:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__TEXT_REGION_LENGTH__+0x7f4061>
+ 606:	84 bf       	out	0x34, r24	; 52
+ 608:	e0 e1       	ldi	r30, 0x10	; 16
+ 60a:	f1 e0       	ldi	r31, 0x01	; 1
+ 60c:	80 81       	ld	r24, Z
+ 60e:	81 60       	ori	r24, 0x01	; 1
+ 610:	80 83       	st	Z, r24
+ 612:	78 94       	sei
+ 614:	08 95       	ret
+
+00000616 <USART_Driver_Putc.part.2>:
+ 616:	90 91 04 08 	lds	r25, 0x0804	; 0x800804 <__TEXT_REGION_LENGTH__+0x7f4804>
+ 61a:	95 ff       	sbrs	r25, 5
+ 61c:	fc cf       	rjmp	.-8      	; 0x616 <USART_Driver_Putc.part.2>
+ 61e:	80 93 02 08 	sts	0x0802, r24	; 0x800802 <__TEXT_REGION_LENGTH__+0x7f4802>
+ 622:	08 95       	ret
+
+00000624 <printf_wrapper>:
+ 624:	cf 93       	push	r28
+ 626:	c8 2f       	mov	r28, r24
+ 628:	8a 30       	cpi	r24, 0x0A	; 10
+ 62a:	39 f0       	breq	.+14     	; 0x63a <printf_wrapper+0x16>
+ 62c:	8c 2f       	mov	r24, r28
+ 62e:	0e 94 0b 03 	call	0x616	; 0x616 <USART_Driver_Putc.part.2>
+ 632:	80 e0       	ldi	r24, 0x00	; 0
+ 634:	90 e0       	ldi	r25, 0x00	; 0
+ 636:	cf 91       	pop	r28
+ 638:	08 95       	ret
+ 63a:	8d e0       	ldi	r24, 0x0D	; 13
+ 63c:	0e 94 0b 03 	call	0x616	; 0x616 <USART_Driver_Putc.part.2>
+ 640:	8c 2f       	mov	r24, r28
+ 642:	0e 94 0b 03 	call	0x616	; 0x616 <USART_Driver_Putc.part.2>
+ 646:	80 e0       	ldi	r24, 0x00	; 0
+ 648:	90 e0       	ldi	r25, 0x00	; 0
+ 64a:	cf 91       	pop	r28
+ 64c:	08 95       	ret
+
+0000064e <__vector_17>:
+ 64e:	1f 92       	push	r1
+ 650:	0f 92       	push	r0
+ 652:	0f b6       	in	r0, 0x3f	; 63
+ 654:	0f 92       	push	r0
+ 656:	11 24       	eor	r1, r1
+ 658:	2f 93       	push	r18
+ 65a:	8f 93       	push	r24
+ 65c:	9f 93       	push	r25
+ 65e:	ef 93       	push	r30
+ 660:	ff 93       	push	r31
+ 662:	80 91 00 08 	lds	r24, 0x0800	; 0x800800 <__TEXT_REGION_LENGTH__+0x7f4800>
+ 666:	e0 91 2d 29 	lds	r30, 0x292D	; 0x80292d <RingBuffer_DEBUG+0xff>
+ 66a:	f0 91 2e 29 	lds	r31, 0x292E	; 0x80292e <RingBuffer_DEBUG+0x100>
+ 66e:	80 83       	st	Z, r24
+ 670:	e0 91 2d 29 	lds	r30, 0x292D	; 0x80292d <RingBuffer_DEBUG+0xff>
+ 674:	f0 91 2e 29 	lds	r31, 0x292E	; 0x80292e <RingBuffer_DEBUG+0x100>
+ 678:	cf 01       	movw	r24, r30
+ 67a:	01 96       	adiw	r24, 0x01	; 1
+ 67c:	80 93 2d 29 	sts	0x292D, r24	; 0x80292d <RingBuffer_DEBUG+0xff>
+ 680:	90 93 2e 29 	sts	0x292E, r25	; 0x80292e <RingBuffer_DEBUG+0x100>
+ 684:	8d 52       	subi	r24, 0x2D	; 45
+ 686:	99 42       	sbci	r25, 0x29	; 41
+ 688:	91 f0       	breq	.+36     	; 0x6ae <__vector_17+0x60>
+ 68a:	9f b7       	in	r25, 0x3f	; 63
+ 68c:	f8 94       	cli
+ 68e:	80 91 31 29 	lds	r24, 0x2931	; 0x802931 <RingBuffer_DEBUG+0x103>
+ 692:	8f 5f       	subi	r24, 0xFF	; 255
+ 694:	80 93 31 29 	sts	0x2931, r24	; 0x802931 <RingBuffer_DEBUG+0x103>
+ 698:	9f bf       	out	0x3f, r25	; 63
+ 69a:	ff 91       	pop	r31
+ 69c:	ef 91       	pop	r30
+ 69e:	9f 91       	pop	r25
+ 6a0:	8f 91       	pop	r24
+ 6a2:	2f 91       	pop	r18
+ 6a4:	0f 90       	pop	r0
+ 6a6:	0f be       	out	0x3f, r0	; 63
+ 6a8:	0f 90       	pop	r0
+ 6aa:	1f 90       	pop	r1
+ 6ac:	18 95       	reti
+ 6ae:	8e e2       	ldi	r24, 0x2E	; 46
+ 6b0:	98 e2       	ldi	r25, 0x28	; 40
+ 6b2:	81 83       	std	Z+1, r24	; 0x01
+ 6b4:	92 83       	std	Z+2, r25	; 0x02
+ 6b6:	e9 cf       	rjmp	.-46     	; 0x68a <__vector_17+0x3c>
+
+000006b8 <__vector_31>:
+ 6b8:	1f 92       	push	r1
+ 6ba:	0f 92       	push	r0
+ 6bc:	0f b6       	in	r0, 0x3f	; 63
+ 6be:	0f 92       	push	r0
+ 6c0:	11 24       	eor	r1, r1
+ 6c2:	2f 93       	push	r18
+ 6c4:	8f 93       	push	r24
+ 6c6:	9f 93       	push	r25
+ 6c8:	ef 93       	push	r30
+ 6ca:	ff 93       	push	r31
+ 6cc:	80 91 40 08 	lds	r24, 0x0840	; 0x800840 <__TEXT_REGION_LENGTH__+0x7f4840>
+ 6d0:	e0 91 31 2a 	lds	r30, 0x2A31	; 0x802a31 <RingBuffer_MIDI+0xff>
+ 6d4:	f0 91 32 2a 	lds	r31, 0x2A32	; 0x802a32 <RingBuffer_MIDI+0x100>
+ 6d8:	80 83       	st	Z, r24
+ 6da:	e0 91 31 2a 	lds	r30, 0x2A31	; 0x802a31 <RingBuffer_MIDI+0xff>
+ 6de:	f0 91 32 2a 	lds	r31, 0x2A32	; 0x802a32 <RingBuffer_MIDI+0x100>
+ 6e2:	cf 01       	movw	r24, r30
+ 6e4:	01 96       	adiw	r24, 0x01	; 1
+ 6e6:	80 93 31 2a 	sts	0x2A31, r24	; 0x802a31 <RingBuffer_MIDI+0xff>
+ 6ea:	90 93 32 2a 	sts	0x2A32, r25	; 0x802a32 <RingBuffer_MIDI+0x100>
+ 6ee:	81 53       	subi	r24, 0x31	; 49
+ 6f0:	9a 42       	sbci	r25, 0x2A	; 42
+ 6f2:	91 f0       	breq	.+36     	; 0x718 <__vector_31+0x60>
+ 6f4:	9f b7       	in	r25, 0x3f	; 63
+ 6f6:	f8 94       	cli
+ 6f8:	80 91 35 2a 	lds	r24, 0x2A35	; 0x802a35 <RingBuffer_MIDI+0x103>
+ 6fc:	8f 5f       	subi	r24, 0xFF	; 255
+ 6fe:	80 93 35 2a 	sts	0x2A35, r24	; 0x802a35 <RingBuffer_MIDI+0x103>
+ 702:	9f bf       	out	0x3f, r25	; 63
+ 704:	ff 91       	pop	r31
+ 706:	ef 91       	pop	r30
+ 708:	9f 91       	pop	r25
+ 70a:	8f 91       	pop	r24
+ 70c:	2f 91       	pop	r18
+ 70e:	0f 90       	pop	r0
+ 710:	0f be       	out	0x3f, r0	; 63
+ 712:	0f 90       	pop	r0
+ 714:	1f 90       	pop	r1
+ 716:	18 95       	reti
+ 718:	82 e3       	ldi	r24, 0x32	; 50
+ 71a:	99 e2       	ldi	r25, 0x29	; 41
+ 71c:	81 83       	std	Z+1, r24	; 0x01
+ 71e:	92 83       	std	Z+2, r25	; 0x02
+ 720:	e9 cf       	rjmp	.-46     	; 0x6f4 <__vector_31+0x3c>
+
+00000722 <USART_Driver_Init>:
+ 722:	e0 ea       	ldi	r30, 0xA0	; 160
+ 724:	f4 e0       	ldi	r31, 0x04	; 4
+ 726:	91 e0       	ldi	r25, 0x01	; 1
+ 728:	91 83       	std	Z+1, r25	; 0x01
+ 72a:	82 e0       	ldi	r24, 0x02	; 2
+ 72c:	82 83       	std	Z+2, r24	; 0x02
+ 72e:	e0 e0       	ldi	r30, 0x00	; 0
+ 730:	f4 e0       	ldi	r31, 0x04	; 4
+ 732:	91 83       	std	Z+1, r25	; 0x01
+ 734:	82 83       	std	Z+2, r24	; 0x02
+ 736:	e0 e4       	ldi	r30, 0x40	; 64
+ 738:	f8 e0       	ldi	r31, 0x08	; 8
+ 73a:	80 e0       	ldi	r24, 0x00	; 0
+ 73c:	9a e0       	ldi	r25, 0x0A	; 10
+ 73e:	80 87       	std	Z+8, r24	; 0x08
+ 740:	91 87       	std	Z+9, r25	; 0x09
+ 742:	83 e0       	ldi	r24, 0x03	; 3
+ 744:	87 83       	std	Z+7, r24	; 0x07
+ 746:	e0 e0       	ldi	r30, 0x00	; 0
+ 748:	f8 e0       	ldi	r31, 0x08	; 8
+ 74a:	23 e2       	ldi	r18, 0x23	; 35
+ 74c:	38 e0       	ldi	r19, 0x08	; 8
+ 74e:	20 87       	std	Z+8, r18	; 0x08
+ 750:	31 87       	std	Z+9, r19	; 0x09
+ 752:	87 83       	std	Z+7, r24	; 0x07
+ 754:	2f b7       	in	r18, 0x3f	; 63
+ 756:	f8 94       	cli
+ 758:	82 e3       	ldi	r24, 0x32	; 50
+ 75a:	99 e2       	ldi	r25, 0x29	; 41
+ 75c:	80 93 31 2a 	sts	0x2A31, r24	; 0x802a31 <RingBuffer_MIDI+0xff>
+ 760:	90 93 32 2a 	sts	0x2A32, r25	; 0x802a32 <RingBuffer_MIDI+0x100>
+ 764:	80 93 33 2a 	sts	0x2A33, r24	; 0x802a33 <RingBuffer_MIDI+0x101>
+ 768:	90 93 34 2a 	sts	0x2A34, r25	; 0x802a34 <RingBuffer_MIDI+0x102>
+ 76c:	10 92 35 2a 	sts	0x2A35, r1	; 0x802a35 <RingBuffer_MIDI+0x103>
+ 770:	2f bf       	out	0x3f, r18	; 63
+ 772:	2f b7       	in	r18, 0x3f	; 63
+ 774:	f8 94       	cli
+ 776:	8e e2       	ldi	r24, 0x2E	; 46
+ 778:	98 e2       	ldi	r25, 0x28	; 40
+ 77a:	80 93 2d 29 	sts	0x292D, r24	; 0x80292d <RingBuffer_DEBUG+0xff>
+ 77e:	90 93 2e 29 	sts	0x292E, r25	; 0x80292e <RingBuffer_DEBUG+0x100>
+ 782:	80 93 2f 29 	sts	0x292F, r24	; 0x80292f <RingBuffer_DEBUG+0x101>
+ 786:	90 93 30 29 	sts	0x2930, r25	; 0x802930 <RingBuffer_DEBUG+0x102>
+ 78a:	10 92 31 29 	sts	0x2931, r1	; 0x802931 <RingBuffer_DEBUG+0x103>
+ 78e:	2f bf       	out	0x3f, r18	; 63
+ 790:	08 95       	ret
+
+00000792 <USART_Driver_Begin>:
+ 792:	88 23       	and	r24, r24
+ 794:	69 f0       	breq	.+26     	; 0x7b0 <USART_Driver_Begin+0x1e>
+ 796:	80 ec       	ldi	r24, 0xC0	; 192
+ 798:	80 93 06 08 	sts	0x0806, r24	; 0x800806 <__TEXT_REGION_LENGTH__+0x7f4806>
+ 79c:	80 e8       	ldi	r24, 0x80	; 128
+ 79e:	80 93 05 08 	sts	0x0805, r24	; 0x800805 <__TEXT_REGION_LENGTH__+0x7f4805>
+ 7a2:	80 e0       	ldi	r24, 0x00	; 0
+ 7a4:	98 e2       	ldi	r25, 0x28	; 40
+ 7a6:	80 93 38 2a 	sts	0x2A38, r24	; 0x802a38 <__iob+0x2>
+ 7aa:	90 93 39 2a 	sts	0x2A39, r25	; 0x802a39 <__iob+0x3>
+ 7ae:	08 95       	ret
+ 7b0:	80 ec       	ldi	r24, 0xC0	; 192
+ 7b2:	80 93 46 08 	sts	0x0846, r24	; 0x800846 <__TEXT_REGION_LENGTH__+0x7f4846>
+ 7b6:	80 e8       	ldi	r24, 0x80	; 128
+ 7b8:	80 93 45 08 	sts	0x0845, r24	; 0x800845 <__TEXT_REGION_LENGTH__+0x7f4845>
+ 7bc:	08 95       	ret
+
+000007be <__tablejump2__>:
+ 7be:	ee 0f       	add	r30, r30
+ 7c0:	ff 1f       	adc	r31, r31
+ 7c2:	05 90       	lpm	r0, Z+
+ 7c4:	f4 91       	lpm	r31, Z
+ 7c6:	e0 2d       	mov	r30, r0
+ 7c8:	09 94       	ijmp
+
+000007ca <_exit>:
+ 7ca:	f8 94       	cli
+
+000007cc <__stop_program>:
+ 7cc:	ff cf       	rjmp	.-2      	; 0x7cc <__stop_program>

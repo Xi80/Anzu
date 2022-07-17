@@ -10,14 +10,9 @@
 #define IR_SENSOR_DRIVER_H_
 
 #include <avr/io.h>
-#include <avr/interrupt.h>
 
 #include <stdint.h>
-#include <string.h>
-
-/*定数群*/
-static const uint16_t irFreq = 60000;	/*センサ更新周期*/
-
+//
 /*ドライバの初期化*/
 void IR_Sensor_Driver_Init(void);
 
@@ -28,6 +23,6 @@ void IR_Sensor_Driver_Begin(void);
 void IR_Sensor_Driver_Stop(void);
 
 /*センサーの値を取得*/
-void IR_Sensor_Driver_Get_Value(uint8_t*);
+uint8_t IR_Sensor_Driver_Get_Value(uint8_t);
 
 #endif /* IR_SENSOR_DRIVER_H_ */

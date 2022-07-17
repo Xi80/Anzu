@@ -82,17 +82,6 @@ void RGB_LED_Driver_Init(void){
 void RGB_LED_Driver_Begin(void){
 	/*TCB0の割り込みを有効化*/
 	TCB0.INTCTRL |= TCB_CAPT_bm;
-	
-	/*シフトレジスタの初期化*/
-	for(uint8_t i = 0;i < 8;i++){
-		while(!(SPI0.INTFLAGS & SPI_DREIF_bm)); /*送信バッファが空になるまで待機*/
-		SPI0.DATA = 0x00;
-	}
-	
-	for(uint8_t i = 0;i < 32;i++)asm("nop"); /*適当な待ちを入れる*/
-	
-	PORTA.OUTCLR = 0x80;
-	PORTA.OUTSET = 0x80;					/*RCKをシバく*/
 	return;
 }
 
@@ -100,7 +89,6 @@ void RGB_LED_Driver_Begin(void){
 void RGB_LED_Driver_Stop(void){
 	/*TCB0の割り込みを無効化*/
 	TCB0.INTCTRL &= ~(TCB_CAPT_bm);
-	
 	return;
 }
 
